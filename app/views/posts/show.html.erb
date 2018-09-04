@@ -1,0 +1,9 @@
+<div class="card border-secondary mb-3" style="max-width: 50rem;">
+  <div class="card-header"><%= link_to @show.title, @show.title %></div>
+  <%= link_to '', root_path  %>
+  <div class="card-body">
+    <p class="card-text"><%= @show.body %><br>
+      Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+  <div class="card-footer"><%= link_to @show.who, root_path, class: 'badge badge-pill badge-success' %><div class=""><%= @show.created_at %></div></div>
+</div>
