@@ -1,0 +1,14 @@
+<div class="btn-toolbar text-md-center" role="toolbar" aria-label="Toolbar with button groups">
+  <div class="btn-group mr-2" role="group" aria-label="First group">
+    <% for j in (1..9) %>
+      <%= link_to j, xml_path(j), {class: "btn btn-secondary"} %>
+  <% end %>
+      </div>
+</div>
+<div>
+
+  <% for i in (0..17) %>
+    <%= @subjects[i].attr('id') + ". " %>
+    <%= @subjects[i].content + ' ' %><br>
+  <% end %>
+</div>

@@ -1,17 +1,14 @@
 Rails.application.routes.draw do
-  get 'posts/create'
 
-  get 'posts/update'
+  get '/xml/:id', to: 'xml#show' , as: 'xml'
+  get 'xml/show1'
 
-  get 'posts/edit'
-
-  get 'posts/destroy'
-
-  get 'posts/index'
-
-  get 'posts/show'
+  get 'posts/new'
 
   resources :posts
+
+  get '/posts/new/', to: 'posts#new', as: 'new'
+  get '/posts/destroy/:id', to: 'posts#destroy', as: 'destroy'
 
   devise_for :users
 

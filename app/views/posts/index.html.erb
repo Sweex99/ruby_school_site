@@ -1,2 +1,23 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+<% if user_signed_in? && (current_user.has_role? :admin) %>
+  <%= link_to "Створити Запис", new_post_path, class: "btn btn-success" %>
+  <br>
+<% end %>
+<br>
+<% @shows.each do |show| %>
+  <div class="card border-secondary mb-3" style="max-width: 51rem;">
+    <div class="card-header"><%= link_to show.title, post_path(show.id) %>
+      <% if user_signed_in? && (current_user.has_role? :admin) %>
+        <%= link_to " Змінити", edit_post_path(show.id), class: 'float-right' %>
+        <%= link_to "Видалити ", destroy_path(show.id), method: :delete, data: {confirm: 'Ви впевнені?'}, class: 'float-right' %>
+      <% end %>
+    </div>
+    <%= link_to '', root_path  %>
+    <div class="card-body">
+      <p class="card-text"><%= show.body %><br>
+        Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+    <div class="card-footer"><%= link_to show.who, root_path, class: 'badge badge-pill badge-success' %><form class="float-right"><%= show.updated_at %></form></div>
+  </div>
+<% end %>
+
+<%= will_paginate @shows, class: 'text-center', previous_label: "&laquo;", next_label: "&raquo;"%>

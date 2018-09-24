@@ -1,0 +1,17 @@
+<%= form_for @post, url:  posts_path  do |f| %>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title, :required => true %>
+  </div>
+  <div>
+    <%= f.label :body %>
+    <%= f.text_area :body, :required => true %>
+  </div>
+  <div>
+    <%= f.label "Автор: " %>
+    <%= f.label :who, :value => current_user.name %>
+  </div>
+  <div>
+    <%= f.submit "Створити Пост" %>
+  </div>
+<% end %>

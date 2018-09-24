@@ -21,10 +21,10 @@
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link" href="<%= posts_show_path %>">Home  <span class="badge badge-primary badge-pill">+10000</span><span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="<%= posts_path %>">Home  <span class="badge badge-primary badge-pill">+10000</span><span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link" href="<%= xml_path(1) %>">Домашнє завдання</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Pricing</a>
@@ -38,9 +38,6 @@
         <% if user_signed_in? %>
           <li class="nav-item">
             <%= link_to current_user.name,  edit_user_registration_path, class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><%= current_user.email %></a>
           </li>
           <li class="nav-item">
             <%= link_to "Выход", destroy_user_session_path, method: :delete, class: "nav-link" %>
@@ -57,6 +54,7 @@
     </div>
   </nav>
 <div class="row container-fluid">
+
   <div class="col-lg-8 mr-4 ml-5 mt-4">
     <%= yield %>
   </div>

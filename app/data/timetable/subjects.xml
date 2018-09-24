@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<subjects>
+  <subjects id="1">
+    <monday>
+      <subject id=""></subject>
+      <subject id=""></subject>
+      <subject id=""></subject>
+      <subject id=""></subject>
+      <subject id=""></subject>
+      <subject id=""></subject>
+      <subject id=""></subject>
+    </monday>
+    <tuesday>
+      <subject id=""></subject>
+      <subject id=""></subject>
+      <subject id=""></subject>
+      <subject id=""></subject>
+      <subject id=""></subject>
+      <subject id=""></subject>
+      <subject id=""></subject>
+    </tuesday>
+    <wednesday>
+      <subject id=""></subject>
+      <subject id=""></subject>
+      <subject id=""></subject>
+      <subject id=""></subject>
+      <subject id=""></subject>
+      <subject id=""></subject>
+      <subject id=""></subject>
+    </wednesday>
+    <thursday>
+      <subject id=""></subject>
+      <subject id=""></subject>
+      <subject id=""></subject>
+      <subject id=""></subject>
+      <subject id=""></subject>
+      <subject id=""></subject>
+      <subject id=""></subject>
+    </thursday>
+    <friday>
+      <subject id=""></subject>
+      <subject id=""></subject>
+      <subject id=""></subject>
+      <subject id=""></subject>
+      <subject id=""></subject>
+      <subject id=""></subject>
+      <subject id=""></subject>
+    </friday>
+    <saturday>
+      <subject id=""></subject>
+      <subject id=""></subject>
+      <subject id=""></subject>
+      <subject id=""></subject>
+      <subject id=""></subject>
+      <subject id=""></subject>
+      <subject id=""></subject>
+    </saturday>
+  </subjects>
+  <subjects id="2"></subjects>
+  <subjects id="3"></subjects>
+  <subjects id="4"></subjects>
+  <subjects id="5"></subjects>
+  <subjects id="6"></subjects>
+  <subjects id="7"></subjects>
+  <subjects id="8"></subjects>
+  <subjects id="9"></subjects>
+</subjects>
