@@ -1,0 +1,21 @@
+<%= form_for HomeTask.new, url: home_works_path  do |f| %>
+  <div>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </div>
+  <div>
+    <%= f.label :subject %>
+    <%= f.text_field :subject %>
+  </div>
+  <div>
+    <%= f.label :class_room %>
+    <%= f.number_field :class_room %>
+  </div>
+  <div>
+    <%= f.label :week %>
+    <%= f.number_field :week %>
+  </div>
+  <div>
+    <%= f.submit %>
+  </div>
+ <% end %>

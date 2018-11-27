@@ -9,7 +9,7 @@
   </div>
   <div>
     <%= f.label :who %>
-    <%= f.text_field :who %>
+    <%= f.text_field :who , current_user.name%>
   </div>
   <div>
     <%= f.submit "Сохранить" %>

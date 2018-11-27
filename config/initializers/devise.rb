@@ -289,4 +289,6 @@ Devise.setup do |config|
   # end
   config.sign_out_via = :get
 
+  config.secret_key = 'b2a937bae69862c74324d703e732d3069978d20a7e3dc0c1305dde2ea8a3f3e2ddb3ac9dff3f02751c52341b2b2aa39cdf0c2dd805910ebc42fa40b0dba27ff5'
+
 end

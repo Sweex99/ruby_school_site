@@ -8,8 +8,8 @@
     <%= f.text_area :body, :required => true %>
   </div>
   <div>
-    <%= f.label "Автор: " %>
-    <%= f.label :who, :value => current_user.name %>
+    <%= f.label "Автор: "%>
+    <%= f.text_field :who, :value => current_user.name%>
   </div>
   <div>
     <%= f.submit "Створити Пост" %>

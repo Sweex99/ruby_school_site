@@ -1,14 +1,17 @@
 Rails.application.routes.draw do
 
-  get '/xml/:id', to: 'xml#show' , as: 'xml'
-  get 'xml/show1'
+ resources :home_works
 
+  get '/xml/:id', to: 'xml#show' , as: 'xml'
+  get 'subject', to: 'xml#subject', as: 'subject'
+  
   get 'posts/new'
 
   resources :posts
 
   get '/posts/new/', to: 'posts#new', as: 'new'
   get '/posts/destroy/:id', to: 'posts#destroy', as: 'destroy'
+
 
   devise_for :users
 

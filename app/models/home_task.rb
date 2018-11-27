@@ -1,0 +1,2 @@
+class HomeTask < ApplicationRecord
+end
