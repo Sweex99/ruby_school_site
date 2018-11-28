@@ -11,10 +11,10 @@ gem 'will_paginate-bootstrap'
 gem 'rolify'
 gem 'devise'
 gem 'cancan'
+ group :production do
+   gem 'pg'
+ end
 
-gem 'pg'
-
-gem 'letter_opener', :group => :development
 
 gem 'twitter-bootstrap-rails'
 gem 'bootstrap', '~> 4.1.3'
@@ -56,6 +56,7 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
+  gem 'letter_opener', :group => :development
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
