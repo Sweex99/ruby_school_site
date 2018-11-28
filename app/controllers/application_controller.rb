@@ -12,4 +12,7 @@ class ApplicationController < ActionController::Base
 
       devise_parameter_sanitizer.permit(:account_update) { |u| u.permit(:name, :email, :password, :current_password)}
     end
+  rescue_from User::EmailTaken do |_exception|
+    redirect_to root_path, notice: t('devise.registrations.signed_up_but_unconfirmed')
+  end
 end
