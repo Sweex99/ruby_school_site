@@ -13,8 +13,19 @@ Rails.application.configure do
 
   # Show full error reports.
   config.consider_all_requests_local = true
+  config.action_mailer.perform_deliveries = true
 
+  config.action_mailer.delivery_method = :smtp
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  config.action_mailer.smtp_settings = {
+      user_name:      ENV['Taras_Matiiv'] || 'swex99@gmail.com',
+      password:       ENV['numlock09'] || 'numlock09',
+      address:       'smtp.gmail.com',
+      port:          '587',
+      authentication: :plain,
+      enable_starttls_auto: true
+  }
 
   # Enable/disable caching. By default caching is disabled.
   if Rails.root.join('tmp/caching-dev.txt').exist?
@@ -49,8 +60,6 @@ Rails.application.configure do
   # Suppress logger output for asset requests.
   config.assets.quiet = true
 
-  config.action_mailer.delivery_method = :letter_opener
-  config.action_mailer.perform_deliveries = true
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 

@@ -11,6 +11,7 @@ gem 'will_paginate-bootstrap'
 gem 'rolify'
 gem 'devise'
 gem 'cancan'
+gem 'dotenv'
  group :production do
    gem 'pg'
  end
