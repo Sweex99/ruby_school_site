@@ -1,0 +1,37 @@
+<%= form_with(model: pdf, local: true) do |form| %>
+  <% if pdf.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(pdf.errors.count, "error") %> prohibited this pdf from being saved:</h2>
+
+      <ul>
+      <% pdf.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :pdf_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description, id: :pdf_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :path %>
+    <%= form.file_field :path, id: :pdf_description, accept: '.docx,.pdf' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :author %>
+    <%= form.text_field :author, id: :pdf_author %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

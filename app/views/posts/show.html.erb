@@ -2,12 +2,12 @@
   <div class="card-header"><%= link_to @shows.title, post_path(@shows.id) %>
     <% if user_signed_in? && (current_user.has_role? :admin) %>
       <%= link_to " Змінити", edit_post_path(@shows.id), class: 'float-right' %>
-      <%= link_to "Видалити ", posts_path(@shows.id), method: :delete, data: {confirm: 'Ви впевнені?'}, class: 'float-right' %>
+      <%= button_to raw("&#65794"), pdf_path(pdf.id), method: :delete, :class => 'btn btn-danger' %>
     <% end %>
   </div>
   <%= link_to '', root_path  %>
   <div class="card-body">
-    <p class="card-text"><%= @shows.body %><br>
+      <p class="card-text"><%= @shows.body %><br>
       Some quick example text to build on the card title and make up the bulk of the card's content.</p>
   </div>
   <div class="card-footer"><%= link_to @shows.who, root_path, class: 'badge badge-pill badge-success' %><form class="float-right"><%= @shows.updated_at %></form></div>

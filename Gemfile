@@ -12,10 +12,10 @@ gem 'rolify'
 gem 'devise'
 gem 'cancan'
 gem 'dotenv'
+
  group :production do
    gem 'pg'
  end
-
 
 gem 'twitter-bootstrap-rails'
 gem 'bootstrap', '~> 4.1.3'

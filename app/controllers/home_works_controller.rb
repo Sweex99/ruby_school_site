@@ -1,47 +1,47 @@
 class HomeWorksController < ApplicationController
 
   def index
-    @hometask = HomeTask.all
+    @home_task = HomeTask.all
   end
 
   def show
     @monday = HomeTask.where(:class_room => params[:id])
-    @Tuesday = HomeTask.where(:class_room => params[:id])
-    @Wednesday = HomeTask.where(:class_room => params[:id])
-    @Thursday = HomeTask.where(:class_room => params[:id])
-    @Friday = HomeTask.where(:class_room => params[:id])
-    @Saturday = HomeTask.where(:class_room => params[:id])
+    @tuesday = HomeTask.where(:class_room => params[:id])
+    @wednesday = HomeTask.where(:class_room => params[:id])
+    @thursday = HomeTask.where(:class_room => params[:id])
+    @friday = HomeTask.where(:class_room => params[:id])
+    @saturday = HomeTask.where(:class_room => params[:id])
   end
 
   def edit
-    @hometask = HomeTask.find(params[:id])
+    @home_task = HomeTask.find(params[:id])
   end
 
   def destroy
-    @hometask = HomeTask.find(params[:id])
-    @hometask.destroy
+    @home_task = HomeTask.find(params[:id])
+    @home_task.destroy
     redirect_to home_works_path
   end
 
   def update
-    @hometask = HomeTask.find(params[:id])
-    if @hometask.update_attributes(home_task_params)
-      redirect_to @hometask
+    @home_task = HomeTask.find(params[:id])
+    if @home_task.update_attributes(home_task_params)
+      redirect_to @home_task
     else
       render :edit
     end
   end
 
   def create
-    @hometask = HomeTask.create(home_task_params)
-    if @hometask.save
+    @home_task = HomeTask.create(home_task_params)
+    if @home_task.save
       render :edit
     end
     return 0
   end
 
   def new
-    @hometask = HomeTask.new
+    @home_task = HomeTask.new
   end
 
   private
