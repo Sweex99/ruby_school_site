@@ -3,7 +3,7 @@
 <%= link_to 'New Pdf', new_pdf_path %>
 <% @pdfs.each do |pdf| %>
   <div class="card border-secondary mb-3" style="max-width: 51rem;">
-    <div class="card-header"><%= pdf.title %> <%= pdf.updated_at %>
+    <div class="card-header"><%= pdf.title %> (<%= pdf.updated_at.strftime('%m-%d-%Y') %>)
       <% if user_signed_in? && (current_user.has_role? :admin) %>
         <%= link_to raw("&#65794"), pdfs_url(pdf.id), method: :delete, data: {confirm: 'Ви впевнені?'}, class: 'float-right' %>
       <% end %>

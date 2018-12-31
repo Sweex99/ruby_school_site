@@ -1,11 +1,8 @@
 class PostsController < ApplicationController
-
   def create
     @post = Post.new(post_params)
-    if @post.save
-      redirect_to @post
-    end
-      return 0
+    redirect_to @post if @post.save
+    0
   end
 
   def new
@@ -32,7 +29,7 @@ class PostsController < ApplicationController
   end
 
   def index
-    @shows = Post.order(created_at: :desc).paginate(:page => params[:page], :per_page => 3)
+    @shows = Post.order(created_at: :desc).paginate(page: params[:page], per_page: 1)
   end
 
   def show
@@ -40,8 +37,8 @@ class PostsController < ApplicationController
   end
 
   private
+
   def post_params
     params.require(:post).permit(:title, :body, :who)
   end
-
 end

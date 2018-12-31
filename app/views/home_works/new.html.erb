@@ -1,21 +1,23 @@
-<%= form_for HomeTask.new, url: home_works_path  do |f| %>
+<%= form_for @home_task, url: home_works_path  do |ht| %>
   <div>
-    <%= f.label :description %>
-    <%= f.text_field :description %>
+    <%= ht.label "Урок: " %>
+    <%= ht.text_field :subject %>
   </div>
   <div>
-    <%= f.label :subject %>
-    <%= f.text_field :subject %>
+    <%= ht.label "Д/З: " %>
+    <%= ht.text_field :description %>
   </div>
   <div>
-    <%= f.label :class_room %>
-    <%= f.number_field :class_room %>
+    <%= ht.label "Дата урока: " %>
+    <%= ht.date_select :data,:start_year => Date.current.year, prefix: :start_date,order: [:year, :month, :day], :use_month_names => ["Січень", "Лютий", "Березень","Квітень","Травень","Червень","Липень",
+                                                                                     "Серпень","Вересень","Жовтень","Лиспопад", "Грудень"] %>
   </div>
   <div>
-    <%= f.label :week %>
-    <%= f.number_field :week %>
+    <%= ht.label 'Клас : ' %>
+    <%= ht.label :class_room, :value => current_user.class_room %>
   </div>
   <div>
-    <%= f.submit %>
+    <%= ht.submit %>
   </div>
  <% end %>
+<%#= Date.parse('2018-12-25').strftime('%A') %>

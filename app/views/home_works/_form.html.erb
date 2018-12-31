@@ -1,0 +1,17 @@
+<%= form_for @home_task do |f| %>
+  <div>
+    <%= f.label :with %>
+    <%= f.date_field :with %>
+  </div>
+  <div>
+    <%= f.label :to %>
+    <%= f.text_area :body %>
+  </div>
+  <div>
+    <%= f.label :who %>
+    <%= f.text_field :who , current_user.name%>
+  </div>
+  <div>
+    <%= f.submit "Сохранить" %>
+  </div>
+<% end %> 

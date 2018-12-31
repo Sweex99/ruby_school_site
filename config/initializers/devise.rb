@@ -8,8 +8,8 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = '73d7baeb1b259551dc9e5ceb92c8eec32558d180b8c2bd1400a5230215e0bf53f5e50123c430ea61574f0e4843b9d7e751c773adfe816ab49b4ef0b2ad9c34f4'
-  
+  # config.secret_key = '276cd7740213c8ac659f5c1298d269f7ff9470db0d6ca01aeda03e64573f2655656f8b4fd294e2f72c30941ba78b3b1a7d2a332c3a2c571c41b687ebe3a4e609'
+
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
   # config.parent_controller = 'DeviseController'
@@ -81,7 +81,7 @@ Devise.setup do |config|
   # It will change confirmation, password recovery and other workflows
   # to behave the same regardless if the e-mail provided was right or wrong.
   # Does not affect registerable.
-   config.paranoid = true
+  # config.paranoid = true
 
   # By default Devise will store the user in session. You can skip storage for
   # particular strategies by setting this option.
@@ -114,7 +114,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 11
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = '3b703300daac6acce23b2195d6a41e78d736ac1b3592c11d5c10874d99bb8d039a6fd3d56024ec92e26b49d4b7c97369c3cf092af42dd528636dd7aeb8311fba'
+  # config.pepper = 'c36b522bf10d8a3733054661d0f2fe76105d800c768071ae4416ab3b34370476c1beb406045a1a5278e07842584cced33d1fa1345417f4f9fdb33011ce2b0578'
 
   # Send a notification to the original email when the user's email is changed.
   # config.send_email_changed_notification = false
@@ -287,8 +287,4 @@ Devise.setup do |config|
   # ActiveSupport.on_load(:devise_failure_app) do
   #   include Turbolinks::Controller
   # end
-  config.sign_out_via = :get
-
-  config.secret_key = 'b2a937bae69862c74324d703e732d3069978d20a7e3dc0c1305dde2ea8a3f3e2ddb3ac9dff3f02751c52341b2b2aa39cdf0c2dd805910ebc42fa40b0dba27ff5'
-
 end

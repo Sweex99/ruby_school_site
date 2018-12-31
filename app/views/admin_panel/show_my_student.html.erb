@@ -1,0 +1,16 @@
+<div class="card border-secondary mb-3" style="max-width: 51rem;">
+  <div class="card-header">
+  </div>
+  <div class="card-body">
+    <p class="card-text"><br>
+      <% @students.each do |student| %>
+        <%= student.id %>
+        <%= student.name %>
+        <%= student.email %>
+      <% end %>
+    </p>
+  </div>
+  <div class="card-footer">
+    <form class="float-right"></form>
+  </div>
+</div>

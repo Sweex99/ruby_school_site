@@ -1,0 +1,23 @@
+<%= render 'button_bar' %>
+<div class="card border-secondary mb-3" style="max-width: 51rem;">
+  <div class="card-header">
+  </div>
+  <div class="card-body">
+    <p class="card-text"><br>
+      <% @users.each do |user| %>
+        <%= user.id %>
+        Ім'я: <%= user.name %>
+        Клас: <%= user.class_room %>
+        <% if user.has_role? :admin %>
+          <%= link_to "Забрати права", delete_admin_path(user.id), method: :get %>
+        <% else %>
+          <%= link_to "Зробити адміном", add_admin_path(user.id), method: :get %>
+        <% end %>
+        <br>
+      <% end %>
+    </p>
+  </div>
+  <div class="card-footer">
+    <form class="float-right"></form>
+  </div>
+</div>

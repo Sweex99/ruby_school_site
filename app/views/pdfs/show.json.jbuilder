@@ -1,1 +1,1 @@
-json.partial! "pdfs/pdf", pdf: @pdf
+json.partial! 'pdfs/pdf', pdf: @pdf

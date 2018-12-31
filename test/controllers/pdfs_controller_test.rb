@@ -5,17 +5,17 @@ class PdfsControllerTest < ActionDispatch::IntegrationTest
     @pdf = pdfs(:one)
   end
 
-  test "should get index" do
+  test 'should get index' do
     get pdfs_url
     assert_response :success
   end
 
-  test "should get new" do
+  test 'should get new' do
     get new_pdf_url
     assert_response :success
   end
 
-  test "should create pdf" do
+  test 'should create pdf' do
     assert_difference('Pdf.count') do
       post pdfs_url, params: { pdf: { author: @pdf.author, description: @pdf.description, title: @pdf.title } }
     end
@@ -23,22 +23,22 @@ class PdfsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to pdf_url(Pdf.last)
   end
 
-  test "should show pdf" do
+  test 'should show pdf' do
     get pdf_url(@pdf)
     assert_response :success
   end
 
-  test "should get edit" do
+  test 'should get edit' do
     get edit_pdf_url(@pdf)
     assert_response :success
   end
 
-  test "should update pdf" do
+  test 'should update pdf' do
     patch pdf_url(@pdf), params: { pdf: { author: @pdf.author, description: @pdf.description, title: @pdf.title } }
     assert_redirected_to pdf_url(@pdf)
   end
 
-  test "should destroy pdf" do
+  test 'should destroy pdf' do
     assert_difference('Pdf.count', -1) do
       delete pdf_url(@pdf)
     end

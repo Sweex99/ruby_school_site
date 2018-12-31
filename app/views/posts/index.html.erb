@@ -16,7 +16,7 @@
       <p class="card-text"><%= show.body %><br>
         Some quick example text to build on the card title and make up the bulk of the card's content.</p>
     </div>
-    <div class="card-footer"><%= link_to show.who, root_path, class: 'badge badge-pill badge-success' %><form class="float-right"><%= show.updated_at %></form></div>
+    <div class="card-footer"><%= link_to show.who, root_path, class: 'badge badge-pill badge-success' %><form class="float-right"><%= show.updated_at.strftime('%m-%d-%Y') %></form></div>
   </div>
 <% end %>
 

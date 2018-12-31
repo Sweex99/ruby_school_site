@@ -1,0 +1,15 @@
+<%= render 'button_bar' %>
+<div class="card border-secondary mb-3" style="max-width: 51rem;">
+  <div class="card-header"><%#= link_to show.title, post_path(show.id) %>
+  </div>
+  <div class="card-body">
+    Ця функція дозволяє перевести усіх існуючих учнів на клас вище.
+    Усі існуючі домашні, дистанційні завдання, оцінки будуть видалені із бази (безповоротно).
+    <p class="card-text"><br>
+      <%= link_to 'Підтвердити', implementation_new_year_path, method: :get, class: 'btn btn-primary' %>
+    </p>
+  </div>
+  <div class="card-footer">
+    <form class="float-right"></form>
+  </div>
+</div>

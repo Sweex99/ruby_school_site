@@ -1,5 +1,5 @@
 class PdfsController < ApplicationController
- # before_action :set_pdf, only: [:show, :edit, :update, :destroy]
+  # before_action :set_pdf, only: [:show, :edit, :update, :destroy]
 
   # GET /pdfs
   # GET /pdfs.json
@@ -12,13 +12,13 @@ class PdfsController < ApplicationController
   def show
     @pdf = Pdf.find(params[:id])
     pdf_filename = File.join(Rails.root, "public/uploaded_pdf/#{@pdf.path}")
-    send_file(pdf_filename, :filename => "#{@pdf.path}", :type => "application/pdf", :x_sendfile=>true, :disposition => 'inline' )
+    send_file(pdf_filename, filename: @pdf.path.to_s, type: 'application/pdf', x_sendfile: true, disposition: 'inline')
   end
 
   def download
     @pdf = Pdf.find(params[:id])
     pdf_filename = File.join(Rails.root, "public/uploaded_pdf/#{@pdf.path}")
-    send_file(pdf_filename, :filename => "#{@pdf.path}", :type => "application/pdf", :x_sendfile=>true )
+    send_file(pdf_filename, filename: @pdf.path.to_s, type: 'application/pdf', x_sendfile: true)
   end
 
   # GET /pdfs/new
@@ -27,25 +27,22 @@ class PdfsController < ApplicationController
   end
 
   # GET /pdfs/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /pdfs
   # POST /pdfs.json
   def create
     @pdf = Pdf.new(pdf_params)
 
-    #save file in public folder
+    # save file in public folder
     uploaded_io = params[:pdf][:path]
     File.open(Rails.root.join('public', 'uploaded_pdf', uploaded_io.original_filename), 'wb') do |file|
       file.write(uploaded_io.read)
     end
     @pdf.path = uploaded_io.original_filename
 
-    if @pdf.save
-      redirect_to pdfs_path, :notice => 'Файл успішно добавлено'
-    end
-      return 0
+    redirect_to pdfs_path, notice: 'Файл успішно добавлено' if @pdf.save
+    0
   end
 
   # PATCH/PUT /pdfs/1
@@ -67,18 +64,18 @@ class PdfsController < ApplicationController
   def destroy
     @pdf = Pdf.find(params[:id])
     @pdf.destroy
-    redirect_to pdfs_path, :notice => 'Файл успішно видалено'
+    redirect_to pdfs_path, notice: 'Файл успішно видалено'
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_pdf
-      @pdf = Pdf.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def pdf_params
-      params.require(:pdf).permit(:title, :description, :path, :author)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_pdf
+    @pdf = Pdf.find(params[:id])
+  end
 
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def pdf_params
+    params.require(:pdf).permit(:title, :description, :path, :author)
+  end
 end

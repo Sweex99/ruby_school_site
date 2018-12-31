@@ -1,14 +1,2 @@
 class Subject < ApplicationRecord
-
 end
-
-
-
-
-
-
-
-
-
-
-

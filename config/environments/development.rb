@@ -19,12 +19,12 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
   config.action_mailer.smtp_settings = {
-      user_name:      ENV['Taras_Matiiv'] || 'swex99@gmail.com',
-      password:       ENV['numlock09'] || 'numlock09',
-      address:       'smtp.gmail.com',
-      port:          '587',
-      authentication: :plain,
-      enable_starttls_auto: true
+    user_name: ENV['Taras_Matiiv'] || 'swex99@gmail.com',
+    password: ENV['numlock09'] || 'numlock09',
+    address: 'smtp.gmail.com',
+    port: '587',
+    authentication: :plain,
+    enable_starttls_auto: true
   }
 
   # Enable/disable caching. By default caching is disabled.
