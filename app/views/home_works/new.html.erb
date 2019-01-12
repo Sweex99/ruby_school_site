@@ -9,7 +9,7 @@
   </div>
   <div>
     <%= ht.label "Дата урока: " %>
-    <%= ht.date_select :data,:start_year => Date.current.year, prefix: :start_date,order: [:year, :month, :day], :use_month_names => ["Січень", "Лютий", "Березень","Квітень","Травень","Червень","Липень",
+    <%= ht.date_select :date_task,:start_year => Date.current.year, prefix: :start_date,order: [:year, :month, :day], :use_month_names => ["Січень", "Лютий", "Березень","Квітень","Травень","Червень","Липень",
                                                                                      "Серпень","Вересень","Жовтень","Лиспопад", "Грудень"] %>
   </div>
   <div>

@@ -1,49 +1,15 @@
-
 <div class="card border-secondary mb-3" style="max-width: 51rem;">
   <div class="card-header"><%#= link_to show.title, post_path(show.id) %>
-    <%#= link_to 'Добавити Д/З', new_home_work_path, class: 'badge badge-pill badge-success' %>
+    <%= link_to 'Добавити Д/З', new_home_work_path, class: 'badge badge-pill badge-success' %>
   </div>
   <div class="card-body">
-    <p class="card-text"><%#= show.body %><br>
-
-      <div class="row">
-        <div class="col-lg-5 mr-4 ml-5 ">
-          <table class="table table-hover">
-            <tr class="table-light">
-              <td colspan="2" class="table-center">Понеділок</td>
-            </tr>
-            <% @monday.each_cons(2) do |mnd, i| %>
-            <tr class="table-light">
-              <td class="subjects"><%= mnd.subject %></td>
-              <td class="hometasks"><%= mnd.description %>
-                <% if mnd.data == i.data %>
-                  </tr>
-                  </table>
-                  <table class="table table-hover">
-                    <tr class="table-light">
-                      <td colspan="2" class="table-center">Понеділок</td>
-                    </tr>
-                    <tr class="table-light">
-                <% end %>
-              <% end %>
-            </tr>
-          </table>
-
-      <hr>
-      <br>
-
-    </p>
+    <% @monday.each_cons(2) do |mnd, i| %>
+      <p> <%= mnd.subject %></p>
+      <p> <%= mnd.day_by_week %></p>
+      <p><%= mnd.description %></p>
+    <% end %>
   </div>
   <div class="card-footer"><%#= link_to show.who, root_path, class: 'badge badge-pill badge-success' %>
     <form class="float-right"><%##= show.updated_at %></form>
   </div>
 </div>
-
-<% @monday.each_cons(2) do |mnd, i| %>
-
-<%= mnd.subject %>
-<%= mnd.description %>
-    <% if mnd.data == i.data %>
-  nice
-  <% end %>
-    <% end %>

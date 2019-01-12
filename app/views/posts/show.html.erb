@@ -2,7 +2,7 @@
   <div class="card-header"><%= link_to @shows.title, post_path(@shows.id) %>
     <% if user_signed_in? && (current_user.has_role? :admin) %>
       <%= link_to " Змінити", edit_post_path(@shows.id), class: 'float-right' %>
-      <%= button_to raw("&#65794"), pdf_path(pdf.id), method: :delete, :class => 'btn btn-danger' %>
+      <%= link_to raw("&#65794"), posts_path(@shows.id), method: :delete, :class => 'float-right' %>
     <% end %>
   </div>
   <%= link_to '', root_path  %>

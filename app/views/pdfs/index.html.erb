@@ -9,16 +9,10 @@
       <% end %>
     </div>
     <div class="card-body">
-      <% if pdf.path.split('.').last == 'docx' %>
-        <%= image_tag("/docx.svg", :alt => "docx", :style => 'float: left; margin : 13px') %>
-      <% else%>
-        <%= image_tag("/pdf.png", :alt => "pdf", :style => 'float: left; margin : 13px') %>
-      <% end %>
-
-      <p class="card-text"><%= pdf.description %><br>
+        <%= image_tag("#{@file[pdf.path.split('.').last]}", :alt => "#{pdf.path.split('.').last}", :style => 'float: left; margin : 13px') %>      <p class="card-text"><%= pdf.description %><br>
     </div>
     <div class="card-footer">
-    <% if pdf.path.split('.').last != 'docx' %>
+    <% if pdf.path.split('.').last == 'pdf' %>
       <%= link_to 'Відкрити', pdf_path(pdf.id), method: :get, class: 'badge badge-pill badge-success' %>
     <% end %>
       <%= link_to raw("Скачати &#128190;"), download_pdf_path(pdf.id), method: :get, class: 'badge badge-pill badge-success'%>

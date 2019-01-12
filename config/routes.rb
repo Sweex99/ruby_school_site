@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
+
   get 'admin_panels/show_user', to: 'admin_panel#show_user', as: 'show_user'
   get 'admin_panels/add_admin/:id', to: 'admin_panel#add_admin', as: 'add_admin'
   get 'admin_panels/delete_admin/:id', to: 'admin_panel#delete_admin', as: 'delete_admin'

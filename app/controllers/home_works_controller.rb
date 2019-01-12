@@ -1,16 +1,18 @@
 class HomeWorksController < ApplicationController
 
   def index
-    @monday = HomeTask.where(class_room: current_user.class_room, day: 'Понеділок').order(created_at: :desc)
-    # @tuesday = HomeTask.where(:class_room => params[:id])
-    # @wednesday = HomeTask.where(:class_room => params[:id])
-    # @thursday = HomeTask.where(:class_room => params[:id])
-    # @friday = HomeTask.where(:class_room => params[:id])
-    # @saturday = HomeTask.where(:class_room => params[:id])
+    @monday = get_home_task("Понеділок")
+    @tuesday = get_home_task "Tuesday"
+    @wednesday = get_home_task "Wednesday"
+    @thursday = get_home_task "Thursday"
+    @friday = get_home_task "Friday"
+    @saturday = get_home_task "Saturday"
   end
 
   def show
-
+    @date = Date.parse('Monday')
+    @date + (@date > Date.today ? 0 : 7)
+    @date.strftime('%d-%w-%Y')
   end
 
   def edit
@@ -33,15 +35,16 @@ class HomeWorksController < ApplicationController
   end
 
   def create
-    translate = { 'Monday' => 'Понеділок', 'Tuesday' => 'Вівторок',
-                  'Wednesday' => 'Середа', 'Thursday' => 'Четвер',
-                  'Friday' => 'П`ятниця', 'Saturday' => 'Субота' }
-    data = (params[:start_date]['data(1i)'] + '-' +
-            params[:start_date]['data(2i)'] + '-' +
-            params[:start_date]['data(3i)']).to_s
+    translate = {'Monday' => 'Понеділок', 'Tuesday' => 'Вівторок',
+                 'Wednesday' => 'Середа', 'Thursday' => 'Четвер',
+                 'Friday' => 'П`ятниця', 'Saturday' => 'Субота'}
+    data = (params[:start_date]['date_task(3i)'] + '-' +
+        params[:start_date]['date_task(2i)'] + '-' +
+        params[:start_date]['date_task(1i)']).to_s
     @home_task = HomeTask.create(subject: home_task_params[:subject], description: home_task_params[:description],
-                                 day: translate[Date.parse(data).strftime('%A')],
-                                 data: data, class_room: current_user.class_room)
+                                 day_by_week: translate[Date.parse(data).strftime('%A')],
+                                 date_task: data, class_room: current_user.class_room)
+
     redirect_to home_works_path if @home_task.save
   end
 
@@ -52,6 +55,19 @@ class HomeWorksController < ApplicationController
   private
 
   def home_task_params
-    @permit = params.require(:home_task).permit(:subject, :description, :data)
+    @permit = params.require(:home_task).permit(:subject, :description, :date_task)
   end
+
+  def date_of_next()
+    date = Date.parse('Monday')
+    delta = date > Date.today ? 0 : 7
+    date + delta
+    return date.strftime('%Y-%w-%d'), (date + 14).strftime('%Y-%w-%d')
+  end
+
+  def get_home_task(day)
+    HomeTask.where(class_room: current_user.class_room, :date_task => "#{date_of_next[0]}".."#{date_of_next[1]}", :day_by_week => 'Понеділок').order(created_at: :desc)
+    #User.where(:name => 'Taras')
+  end
+
 end

@@ -4,6 +4,8 @@ class PdfsController < ApplicationController
   # GET /pdfs
   # GET /pdfs.json
   def index
+    @file = { "docx" => '/docx.jpg', "pdf" => "/pdf.png", "xlsx" => "/xls.jpg", "pptx" => "/pptx.jpg",
+              "xls" => "/xls.jpg", "ppt" => "/pptx.jpg", "doc" => '/docx.jpg'}
     @pdfs = Pdf.order(created_at: :desc)
   end
 
@@ -42,7 +44,6 @@ class PdfsController < ApplicationController
     @pdf.path = uploaded_io.original_filename
 
     redirect_to pdfs_path, notice: 'Файл успішно добавлено' if @pdf.save
-    0
   end
 
   # PATCH/PUT /pdfs/1

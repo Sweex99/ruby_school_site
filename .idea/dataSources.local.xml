@@ -2,22 +2,22 @@
 <project version="4">
   <component name="dataSourceStorageLocal">
     <data-source name="development" uuid="34177248-c875-44cf-871e-7c880697ba24">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" family="SQLITE" exact-version="0.0" />
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="SQLITE" exact-version="0.0" />
       <auth-required>false</auth-required>
       <introspection-schemas>*:*</introspection-schemas>
     </data-source>
     <data-source name="test" uuid="fe434af1-59c8-440b-89e9-a02f8593f958">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" family="SQLITE" exact-version="0.0" />
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="SQLITE" exact-version="0.0" />
       <auth-required>false</auth-required>
       <introspection-schemas>*:</introspection-schemas>
     </data-source>
     <data-source name="development [2]" uuid="ec720bb5-df23-4067-802d-a4ac67e7160e">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" family="SQLITE" exact-version="0.0" />
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="SQLITE" exact-version="0.0" />
       <auth-required>false</auth-required>
       <introspection-schemas>*:</introspection-schemas>
     </data-source>
     <data-source name="test [2]" uuid="28705223-78cc-436b-8156-22e53652b2fa">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" family="SQLITE" exact-version="0.0" />
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="SQLITE" exact-version="0.0" />
       <auth-required>false</auth-required>
     </data-source>
   </component>

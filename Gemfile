@@ -15,6 +15,10 @@ gem 'rolify'
 
 gem 'pg'
 
+gem 'ckeditor'
+gem 'carrierwave'
+gem 'mini_magick'
+
 gem 'bootstrap', '~> 4.1.3'
 gem 'twitter-bootstrap-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

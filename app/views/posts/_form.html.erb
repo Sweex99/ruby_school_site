@@ -1,15 +1,15 @@
-<%= form_for @post do |f| %>
+<%= form_for @post, url:  posts_path do |f| %>
   <div>
     <%= f.label :title %>
     <%= f.text_field :title %>
   </div>
   <div>
     <%= f.label :body %>
-    <%= f.text_area :body %>
+    <%= f.cktext_area :body %>
   </div>
   <div>
     <%= f.label :who %>
-    <%= f.text_field :who , current_user.name%>
+    <%= f.text_field :who , :value => current_user.name%>
   </div>
   <div>
     <%= f.submit "Сохранить" %>
