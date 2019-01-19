@@ -1,4 +1,4 @@
-<%= form_for @post, url:  posts_path do |f| %>
+<%= form_for @post do |f| %>
   <div>
     <%= f.label :title %>
     <%= f.text_field :title %>
@@ -12,6 +12,6 @@
     <%= f.text_field :who , :value => current_user.name%>
   </div>
   <div>
-    <%= f.submit "Сохранить" %>
+    <%= f.submit "Зберегти" %>
   </div>
 <% end %>

@@ -1,15 +1,89 @@
 <div class="card border-secondary mb-3" style="max-width: 51rem;">
-  <div class="card-header"><%#= link_to show.title, post_path(show.id) %>
+  <div class="card-header">
     <%= link_to 'Добавити Д/З', new_home_work_path, class: 'badge badge-pill badge-success' %>
   </div>
   <div class="card-body">
-    <% @monday.each_cons(2) do |mnd, i| %>
-      <p> <%= mnd.subject %></p>
-      <p> <%= mnd.day_by_week %></p>
-      <p><%= mnd.description %></p>
-    <% end %>
+
+    <div class="row container-fluid">
+      <div class="col-lg-5 ml-4">
+        <table class="table table-hover" align="left">
+          <tr class="table-light">
+            <td colspan="4" class="table-center">Понеділок <%= @monday[0].date_task %></td>
+          </tr>
+          <% @monday.each_cons(2) do |mnd, i| %>
+            <tr class="table-light">
+              <th class="subjects"><%= mnd.subject %></th>
+              <th class="hometasks" colspan="2"><%= mnd.description %></th>
+            </tr>
+            <% if mnd.date_task != i.date_task %>
+              <tr class="table-light">
+                <td colspan="4" class="table-center">Вівторок <%= @tuesday[0].date_task %></td>
+              </tr>
+              <% @tuesday.each_cons(2) do |tsd, i2| %>
+                <tr class="table-light">
+                  <th class="subjects"><%= tsd.subject %></th>
+                  <th class="hometasks" colspan="2"><%= tsd.description %>
+                </tr>
+                <% if tsd.date_task != i2.date_task %>
+                  <tr class="table-light">
+                    <td colspan="4" class="table-center">Середа <%= @wednesday[0].date_task %></td>
+                  </tr>
+                  <% @wednesday.each_cons(2) do |wdn, i3| %>
+                    <tr class="table-light">
+                      <td class="subjects"><%= wdn.subject %></td>
+                      <td class="hometasks" colspan="2"><%= wdn.description %></td>
+                    </tr>
+                    <% if wdn.date_task != i3.date_task or wdn.nil? %>
+                      </table></div>
+                      <div class="ml-5" align="right">
+                        <table class="table table-hover" align="right" style="float: right">
+                          <tr class="table-light">
+                            <td colspan="4" class="table-center">Четвер <%= @thursday[0].date_task %></td>
+                          </tr>
+                          <% @thursday.each_cons(2) do |trs, i4| %>
+                            <tr class="table-light">
+                              <td><%= trs.subject %></td>
+                              <td colspan="2"><%= trs.description %></td>
+                            </tr>
+                            <% if trs.date_task != i4.date_task %>
+                              <tr class="table-light">
+                                <td colspan="4" class="table-center">П'ятниця <%= @friday[0].date_task %></td>
+                              </tr>
+                              <% @friday.each_cons(2) do |frd, i5| %>
+                                <tr class="table-light">
+                                  <td class="subjects"><%= frd.subject %></td>
+                                  <td class="hometasks" colspan="2"><%= frd.description %>
+                                    <% if frd.date_task != i5.date_task or frd.nil? %>
+                                      <p>asdasdasd</p>
+                                  <tr class="table-light">
+                                    <td colspan="4" class="table-center">Субота <%= @friday[0].date_task %></td>
+                                  </tr>
+                                  <% @saturday.each_cons(2) do |str, i6| %>
+                                    <tr class="table-light">
+                                      <td class="subjects"><%= str.subject %></td>
+                                      <td class="hometasks" colspan="2"><%= str.description %>
+                                    <% if str.date_task != i6.date_task or str.empty? %>
+                                          <p>sadsad</p>
+                                        <% end %>
+                                    <% end %>
+                                <% end %>
+                              <% end %>
+                            <% end %>
+                          <% end %>
+                    <% end %>
+                  <% end %>
+                <% end %>
+              <% end %>
+            <% end %>
+          <% end %>
+          </tr>
+          </table>
+          <hr>
+          <br>
+          </div>
   </div>
   <div class="card-footer"><%#= link_to show.who, root_path, class: 'badge badge-pill badge-success' %>
     <form class="float-right"><%##= show.updated_at %></form>
   </div>
+</div>
 </div>

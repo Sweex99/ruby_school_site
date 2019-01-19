@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @poct.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @poct.body %>
+</p>
+
+<p>
+  <strong>Who:</strong>
+  <%= @poct.who %>
+</p>
+
+<%= link_to 'Edit', edit_poct_path(@poct) %> |
+<%= link_to 'Back', pocts_path %>

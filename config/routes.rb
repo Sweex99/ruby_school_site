@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :pocts
+
   mount Ckeditor::Engine => '/ckeditor'
 
   get 'admin_panels/show_user', to: 'admin_panel#show_user', as: 'show_user'
@@ -30,7 +32,7 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  root 'study#index'
+  root 'pocts#index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

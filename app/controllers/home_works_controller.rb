@@ -1,12 +1,12 @@
 class HomeWorksController < ApplicationController
 
   def index
-    @monday = get_home_task("Понеділок")
-    @tuesday = get_home_task "Tuesday"
-    @wednesday = get_home_task "Wednesday"
-    @thursday = get_home_task "Thursday"
-    @friday = get_home_task "Friday"
-    @saturday = get_home_task "Saturday"
+    @monday = get_home_task"Понеділок"
+    @tuesday = get_home_task"Вівторок"
+    @wednesday = get_home_task "Середа"
+    @thursday = get_home_task "Четвер"
+    @friday = get_home_task "П`ятниця"
+    @saturday = get_home_task "Субота"
   end
 
   def show
@@ -52,11 +52,7 @@ class HomeWorksController < ApplicationController
     @home_task = HomeTask.new
   end
 
-  private
-
-  def home_task_params
-    @permit = params.require(:home_task).permit(:subject, :description, :date_task)
-  end
+  public
 
   def date_of_next()
     date = Date.parse('Monday')
@@ -65,9 +61,14 @@ class HomeWorksController < ApplicationController
     return date.strftime('%Y-%w-%d'), (date + 14).strftime('%Y-%w-%d')
   end
 
+  private
+
+  def home_task_params
+    @permit = params.require(:home_task).permit(:subject, :description, :date_task)
+  end
+
   def get_home_task(day)
-    HomeTask.where(class_room: current_user.class_room, :date_task => "#{date_of_next[0]}".."#{date_of_next[1]}", :day_by_week => 'Понеділок').order(created_at: :desc)
-    #User.where(:name => 'Taras')
+   HomeTask.where(class_room: current_user.class_room, :date_task => date_of_next[0]..date_of_next[1], :day_by_week => day).order(created_at: :desc)
   end
 
 end
