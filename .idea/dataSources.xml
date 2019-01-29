@@ -37,5 +37,21 @@
         <property name="enable_load_extension" value="true" />
       </driver-properties>
     </data-source>
+    <data-source source="LOCAL" name="Rails Study: test" uuid="7bb8183c-c464-4fee-9fc4-710316181005">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1:5432/demo_test_test</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails Study: development" uuid="e6b0bed3-4e79-4e1e-a4d7-7950a81cc2b2">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1:5432/development</jdbc-url>
+    </data-source>
   </component>
 </project>

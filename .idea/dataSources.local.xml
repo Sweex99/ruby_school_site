@@ -20,5 +20,13 @@
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="SQLITE" exact-version="0.0" />
       <auth-required>false</auth-required>
     </data-source>
+    <data-source name="Rails Study: test" uuid="7bb8183c-c464-4fee-9fc4-710316181005">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" exact-version="0" />
+      <user-name>postgres</user-name>
+    </data-source>
+    <data-source name="Rails Study: development" uuid="e6b0bed3-4e79-4e1e-a4d7-7950a81cc2b2">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" exact-version="0" />
+      <user-name>postgres</user-name>
+    </data-source>
   </component>
 </project>

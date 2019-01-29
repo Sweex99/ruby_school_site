@@ -37,7 +37,7 @@ class HomeWorksController < ApplicationController
   def create
     translate = {'Monday' => 'Понеділок', 'Tuesday' => 'Вівторок',
                  'Wednesday' => 'Середа', 'Thursday' => 'Четвер',
-                 'Friday' => 'П`ятниця', 'Saturday' => 'Субота'}
+                   'Friday' => 'П`ятниця', 'Saturday' => 'Субота'}
     data = (params[:start_date]['date_task(3i)'] + '-' +
         params[:start_date]['date_task(2i)'] + '-' +
         params[:start_date]['date_task(1i)']).to_s
@@ -58,7 +58,7 @@ class HomeWorksController < ApplicationController
     date = Date.parse('Monday')
     delta = date > Date.today ? 0 : 7
     date + delta
-    return date.strftime('%Y-%w-%d'), (date + 14).strftime('%Y-%w-%d')
+    return date.strftime('%Y-%m-%d').to_date, (date + 14).strftime('%Y-%m-%d').to_date
   end
 
   private
