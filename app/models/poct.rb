@@ -1,2 +1,0 @@
-class Poct < ApplicationRecord
-end

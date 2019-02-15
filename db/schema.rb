@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190112212638) do
+ActiveRecord::Schema.define(version: 20190212145728) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -68,6 +68,26 @@ ActiveRecord::Schema.define(version: 20190112212638) do
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.string "body"
+    t.string "who"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "remote_studies", force: :cascade do |t|
+    t.string "title"
+    t.string "body"
+    t.string "Ylink"
+    t.string "Slink"
+    t.string "Subject"
+    t.integer "class_room"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "reports", force: :cascade do |t|
+    t.integer "student_id"
+    t.string "body"
+    t.date "when"
     t.string "who"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

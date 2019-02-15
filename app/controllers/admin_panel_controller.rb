@@ -1,7 +1,5 @@
 class AdminPanelController < ApplicationController
-  :rolify
-
-  before_action :authenticate_user!
+  before_action :must_be_admin
 
   def show_my_student
     @students = User.where(class_room: current_user.class_room)
@@ -52,4 +50,5 @@ class AdminPanelController < ApplicationController
       format.json { head :no_content }
     end
   end
+
 end

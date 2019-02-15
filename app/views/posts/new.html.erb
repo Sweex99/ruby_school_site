@@ -1,17 +1,19 @@
 <%= form_for @post, url:  posts_path  do |f| %>
   <div>
     <%= f.label :title %>
-    <%= f.text_field :title, :required => true %>
+    <%= f.text_field :title, :required => true, class: 'ckeditor' %>
   </div>
   <div>
-    <%= f.label :body %>
+    <%= f.label 'Опис' %>
     <%= f.cktext_area :body %>
   </div>
   <div>
     <%= f.label "Автор: "%>
-    <%= f.text_field :who, :value => current_user.name%>
+    <%= f.text_field :who, :value => current_user.name, :class => 'ckeditor'%>
   </div>
   <div>
     <%= f.submit "Створити Пост" %>
   </div>
 <% end %>
+
+</script>

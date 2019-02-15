@@ -8,82 +8,71 @@
       <div class="col-lg-5 ml-4">
         <table class="table table-hover" align="left">
           <tr class="table-light">
-            <td colspan="4" class="table-center">Понеділок <%= @monday[0].date_task unless @monday.blank? %></td>
+            <td colspan="4" class="table-center">Понеділок <%= date_of_next('Monday') %></td>
           </tr>
-          <% @monday.each_cons(2) do |mnd, i| %>
+          <% @monday.each do |mnd| %>
             <tr class="table-light">
               <th class="subjects"><%= mnd.subject %></th>
               <th class="hometasks" colspan="2"><%= mnd.description %></th>
             </tr>
-            <% if mnd.date_task != i.date_task %>
+          <% end %>
               <tr class="table-light">
-                <td colspan="4" class="table-center">Вівторок <%= @tuesday[0].date_task unless @tuesday.blank? %></td>
+                <td colspan="4" class="table-center">Вівторок <%= date_of_next('Tuesday') %></td>
               </tr>
-              <% @tuesday.each_cons(2) do |tsd, i2| %>
+              <% @tuesday.each do |tsd| %>
                 <tr class="table-light">
                   <th class="subjects"><%= tsd.subject %></th>
                   <th class="hometasks" colspan="2"><%= tsd.description %>
                 </tr>
-                <% if tsd.date_task != i2.date_task %>
+          <% end %>
                   <tr class="table-light">
-                    <td colspan="4" class="table-center">Середа <%= @wednesday[0].date_task unless @wednesday.blank? %></td>
+                    <td colspan="4" class="table-center">Середа <%= date_of_next('Wednesday') %></td>
                   </tr>
-                  <% @wednesday.each_cons(2) do |wdn, i3| %>
+                  <% @wednesday.each do |wdn| %>
                     <tr class="table-light">
                       <td class="subjects"><%= wdn.subject %></td>
                       <td class="hometasks" colspan="2"><%= wdn.description %></td>
                     </tr>
-                    <% if wdn.date_task != i3.date_task or wdn.nil? %>
+          <% end %>
                       </table></div>
                       <div class="ml-5" align="right">
                         <table class="table table-hover" align="right" style="float: right">
                           <tr class="table-light">
-                            <td colspan="4" class="table-center">Четвер <%= @thursday[0].date_task unless @thursday.blank? %></td>
+                            <td colspan="4" class="table-center">Четвер <%= date_of_next('Thursday') %></td>
                           </tr>
-                          <% @thursday.each_cons(2) do |trs, i4| %>
+                          <% @thursday.each do |trs| %>
                             <tr class="table-light">
                               <td><%= trs.subject %></td>
                               <td colspan="2"><%= trs.description %></td>
                             </tr>
-                            <% if trs.date_task != i4.date_task %>
+                          <% end %>
                               <tr class="table-light">
-                                <td colspan="4" class="table-center">П'ятниця <%= @friday[0].date_task unless @friday.blank? %></td>
+                                <td colspan="4" class="table-center">П'ятниця <%= date_of_next('Friday') %></td>
                               </tr>
-                              <% @friday.each_cons(2) do |frd, i5| %>
+                              <% @friday.each do |frd| %>
                                 <tr class="table-light">
                                   <td class="subjects"><%= frd.subject %></td>
                                   <td class="hometasks" colspan="2"><%= frd.description %>
-                                    <% if frd.date_task != i5.date_task or frd.nil? %>
-                                      <p>asdasdasd</p>
+                          <% end %>
+
                                   <tr class="table-light">
-                                    <td colspan="4" class="table-center">Субота <%= @saturday[0].date_task unless @saturday.blank? %></td>
+                                    <td colspan="4" class="table-center">Субота <%= date_of_next('Saturday') %></td>
                                   </tr>
-                                  <% @saturday.each_cons(2) do |str, i6| %>
+                                  <% @saturday.each do |str| %>
                                     <tr class="table-light">
                                       <td class="subjects"><%= str.subject %></td>
                                       <td class="hometasks" colspan="2"><%= str.description %>
-                                    <% if str.date_task != i6.date_task or str.empty? %>
-                                          <p>sadsad</p>
-                                        <% end %>
-                                    <% end %>
-                                <% end %>
-                              <% end %>
-                            <% end %>
                           <% end %>
-                    <% end %>
-                  <% end %>
-                <% end %>
-              <% end %>
-            <% end %>
-          <% end %>
-          </tr>
+
+
+                          </tr>
           </table>
           <hr>
           <br>
           </div>
+    </div>
+    <div class="card-footer"><%#= link_to show.who, root_path, class: 'badge badge-pill badge-success' %>
+      <form class="float-right"><%##= show.updated_at %></form>
+    </div>
   </div>
-  <div class="card-footer"><%#= link_to show.who, root_path, class: 'badge badge-pill badge-success' %>
-    <form class="float-right"><%##= show.updated_at %></form>
-  </div>
-</div>
 </div>

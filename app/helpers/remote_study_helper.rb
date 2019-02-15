@@ -1,0 +1,2 @@
+module RemoteStudyHelper
+end

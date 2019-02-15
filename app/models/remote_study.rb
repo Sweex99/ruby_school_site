@@ -1,0 +1,2 @@
+class RemoteStudy < ApplicationRecord
+end

@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/galetahub/ckeditor.git
+  revision: 2def63b8be9bac701869d70a4f6600772b42de3d
+  specs:
+    ckeditor (4.3.0)
+      orm_adapter (~> 0.5.0)
+      terrapin
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -65,9 +73,6 @@ GEM
       mime-types (>= 1.16)
     childprocess (0.9.0)
       ffi (~> 1.0, >= 1.0.11)
-    ckeditor (4.3.0)
-      orm_adapter (~> 0.5.0)
-      terrapin
     climate_control (0.2.0)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
@@ -229,7 +234,7 @@ DEPENDENCIES
   cancan
   capybara (~> 2.13)
   carrierwave
-  ckeditor
+  ckeditor!
   coffee-rails (~> 4.2)
   devise
   dotenv

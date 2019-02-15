@@ -10,4 +10,13 @@ class ApplicationController < ActionController::Base
 
     devise_parameter_sanitizer.permit(:account_update) { |u| u.permit(:name, :email, :password, :current_password) }
   end
+
+  private
+
+  def must_be_admin
+    unless (current_user && (current_user.has_role? :admin))
+      redirect_to root_path, notice: "Some message"
+    end
+  end
+
 end

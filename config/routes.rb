@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
-  resources :pocts
+
+  resources :remote_study do
+    get '', to: 'remote_study#show', as: 'subject'
+  end
 
   mount Ckeditor::Engine => '/ckeditor'
+
+  resources :student_report
 
   get 'admin_panels/show_user', to: 'admin_panel#show_user', as: 'show_user'
   get 'admin_panels/add_admin/:id', to: 'admin_panel#add_admin', as: 'add_admin'
@@ -32,7 +37,8 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  root 'pocts#index'
+
+  root 'study#index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

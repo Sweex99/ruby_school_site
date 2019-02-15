@@ -1,0 +1,22 @@
+<%= form_for @report, url: student_report_index_url  do |f| %>
+  <div>
+    <%= f.label 'Студент' %>
+    <%= f.select_tag :student_id, options_for_select(User.all.collect {|p| [p.name, p.id]}, 1) %>
+  </div>
+  <div>
+    <%= f.label :body %>
+    <%= f.cktext_area :body %>
+  </div>
+  <div>
+    <%= f.label "Дата: "%>
+    <%= f.date_select :when,:start_year => Date.current.year, prefix: :start_date,order: [:day, :month, :year], :use_month_names => ["Січень", "Лютий", "Березень","Квітень","Травень","Червень","Липень",
+                                                                                                                                           "Серпень","Вересень","Жовтень","Лиспопад", "Грудень"] %>
+  </div>
+  <div>
+    <%= f.label "Автор: "%>
+    <%= f.text_field :who, :value => current_user.name%>
+  </div>
+  <div>
+    <%= f.submit "Зберегти" %>
+  </div>
+<% end %>

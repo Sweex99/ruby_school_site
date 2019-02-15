@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  body: MyString
+  Ylink: MyString
+  Slink: MyString
+  Subject: MyString
+  class_room: 1
+
+two:
+  title: MyString
+  body: MyString
+  Ylink: MyString
+  Slink: MyString
+  Subject: MyString
+  class_room: 1

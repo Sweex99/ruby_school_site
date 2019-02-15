@@ -15,7 +15,7 @@ gem 'rolify'
 
 gem 'pg'
 
-gem 'ckeditor'
+gem 'ckeditor', github: 'galetahub/ckeditor'
 gem 'carrierwave'
 gem 'mini_magick'
 
