@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
   resources :remote_study do
-    get '', to: 'remote_study#show', as: 'subject'
+    member do
+      get 'show', to: 'remote_study#show', as: 'subject'
+    end
   end
 
   mount Ckeditor::Engine => '/ckeditor'
@@ -25,9 +27,6 @@ Rails.application.routes.draw do
 
   resources :home_works
 
-  get '/xml/:id', to: 'xml#show', as: 'xml'
-  get 'subject', to: 'xml#subject', as: 'subject'
-
   get 'posts/new'
 
   resources :posts
@@ -37,8 +36,5 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-
   root 'study#index'
-
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

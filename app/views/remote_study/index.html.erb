@@ -3,7 +3,7 @@
     <div class="col-lg-4">
       <div class="card border-primary mb-3" style="max-width: 15rem;">
         <div class="card-header">
-          <div class="text-center"><%= @subjects[i] %></div>
+          <div class="text-center"><%= @subjects[i][0] %></div>
         </div>
         <div class="card-body">
           <h4 class="card-title">
@@ -12,7 +12,7 @@
           <p class="card-text"><%#= RemoteStudy.where().count %></p>
           <p class="card-text">
           <div class="text-center">
-            <button type="button" class="btn btn-success"><%= link_to "Перейти", remote_study_subject_path(:remote_study_id => @subjects[i]) %></button>
+            <button type="button" class="btn btn-success"><%= link_to "Перейти", subject_remote_study_path(:id => @subjects[i][1]) %></button>
           </div>
           </p>
         </div>
