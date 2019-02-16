@@ -7,7 +7,7 @@ class RemoteStudyController < ApplicationController
   end
 
   def show
-    @task = RemoteStudy.where(:class_room => current_user.class_room, :Subject => params[:remote_study_id])
+    @task = RemoteStudy.where(:class_room => current_user.class_room, :Subject => params[:id])
   end
 
   def new
