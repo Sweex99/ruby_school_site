@@ -1,7 +1,1 @@
 language: ruby
-sudo: true
-rvm:
-  - 2.2
-script:
-  - gem install bundler
-  - bundle install
