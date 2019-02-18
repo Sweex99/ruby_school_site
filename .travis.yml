@@ -3,4 +3,4 @@ sudo: true
 rvm:
   - 2.2
 script:
-  - bundle exec rails db:migrate RAILS_ENV=test
+  - bundle install
