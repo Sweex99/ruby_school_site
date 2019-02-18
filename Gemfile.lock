@@ -1,11 +1,3 @@
-GIT
-  remote: https://github.com/galetahub/ckeditor.git
-  revision: 2def63b8be9bac701869d70a4f6600772b42de3d
-  specs:
-    ckeditor (4.3.0)
-      orm_adapter (~> 0.5.0)
-      terrapin
-
 GEM
   remote: https://rubygems.org/
   specs:
