@@ -14,7 +14,9 @@ class StudentReportController < ApplicationController
   end
 
   def destroy
-
+    if Report.destroy(params[:id])
+      redirect_to root_path, notice: 'Yeeeeh'
+    end
   end
 
   def update

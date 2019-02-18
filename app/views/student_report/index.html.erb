@@ -1,5 +1,5 @@
 <% if user_signed_in? && (current_user.has_role? :admin) %>
-  <%= link_to "Створити Запис", ckeditor_path, class: "btn btn-success" %>
+  <%= link_to "Створити Запис", new_student_report_path, class: "btn btn-success" %>
   <br>
 <% end %>
 <br>
@@ -7,13 +7,13 @@
   <div class="card border-secondary mb-3" style="max-width: 51rem;">
     <div class="card-header"><%= link_to report.student_id %>
       <% if user_signed_in? && (current_user.has_role? :admin) %>
-        <%= link_to " Змінити", class: 'float-right' %>
-        <%= link_to "Видалити ", method: :delete, data: {confirm: 'Ви впевнені?'}, class: 'float-right' %>
+        <%= link_to "cancel", student_report_path(:id => report.id), method: :delete, data: {confirm: 'Ви впевнені?'}, class: 'float-right material-icons' %>
+        <%= link_to "edit", edit_student_report_path(report.id), class: 'float-right material-icons' %>
       <% end %>
     </div>
     <%= link_to '', root_path  %>
     <div class="card-body">
-      <p class="card-text"><%= report.body %><br>
+      <p class="card-text"><%= report.body.html_safe %><br>
         Some quick example text to build on the card title and make up the bulk of the card's content.</p>
     </div>
     <div class="card-footer"><%= link_to report.who, root_path, class: 'badge badge-pill badge-success' %><form class="float-right"><%= report.when.strftime('%d-%m-%Y') %></form></div>

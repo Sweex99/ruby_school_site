@@ -3,7 +3,6 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     redirect_to @post if @post.save
-    0
   end
 
   def new

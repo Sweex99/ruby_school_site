@@ -7,8 +7,9 @@
   <div class="card border-secondary mb-3" style="max-width: 51rem;">
     <div class="card-header"><%= link_to show.title, post_path(show.id) %>
       <% if user_signed_in? && (current_user.has_role? :admin) %>
-        <%= link_to " Змінити", edit_post_path(show.id), class: 'float-right' %>
-        <%= link_to "Видалити ", destroy_path(show.id), method: :delete, data: {confirm: 'Ви впевнені?'}, class: 'float-right' %>
+        <%= link_to "delete", destroy_path(show.id), method: :delete, data: {confirm: 'Ви впевнені?'}, class: 'float-right material-icons' %>
+        <%= link_to "edit", edit_post_path(show.id), class: 'float-right material-icons' %>
+
       <% end %>
     </div>
     <%= link_to '', root_path  %>
