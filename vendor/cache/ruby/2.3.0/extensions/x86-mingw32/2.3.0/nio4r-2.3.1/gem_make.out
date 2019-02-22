@@ -1,0 +1,14 @@
+current directory: H:/Project/ruby_school_site/vendor/cache/ruby/2.3.0/gems/nio4r-2.3.1/ext/nio4r
+C:/RailsInstaller/Ruby2.3.3/bin/ruby.exe -r ./siteconf20190221-4136-anxhqb.rb extconf.rb
+
+current directory: H:/Project/ruby_school_site/vendor/cache/ruby/2.3.0/gems/nio4r-2.3.1/ext/nio4r
+make "DESTDIR=" clean
+make: *** No rule to make target `clean'.  Stop.
+
+current directory: H:/Project/ruby_school_site/vendor/cache/ruby/2.3.0/gems/nio4r-2.3.1/ext/nio4r
+make "DESTDIR="
+make: Nothing to be done for `all'.
+
+current directory: H:/Project/ruby_school_site/vendor/cache/ruby/2.3.0/gems/nio4r-2.3.1/ext/nio4r
+make "DESTDIR=" install
+make: Nothing to be done for `install'.

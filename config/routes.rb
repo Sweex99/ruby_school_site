@@ -1,12 +1,22 @@
 Rails.application.routes.draw do
 
-  resources :remote_study do
-    member do
-      get 'show', to: 'remote_study#show', as: 'subject'
-    end
-  end
+  get 'show_user/index'
 
-  mount Ckeditor::Engine => '/ckeditor'
+  get 'show_user/show'
+
+  get 'show_user/edit'
+
+  get 'show_user/update'
+
+  get 'show_user/destroy'
+
+  get 'show_user/create'
+
+  get 'show_user/new'
+
+  resources :remote_study do
+      get 'show', to: 'remote_study#show', as: 'subject'
+  end
 
   resources :student_report
 

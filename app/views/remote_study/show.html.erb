@@ -1,5 +1,9 @@
 <div class="jumbotron">
-
+<% @task.each do |t| %>
+  <p><%= t.body.html_safe %></p>
+    <p><a href="https://youtu.be/8EbgoLXA2t4">asd</a></p>
+  <% end %>
 </div>
 <%= link_to 'asdadasdasda', new_remote_study_path() %>
+<%= debug(params) %>
 

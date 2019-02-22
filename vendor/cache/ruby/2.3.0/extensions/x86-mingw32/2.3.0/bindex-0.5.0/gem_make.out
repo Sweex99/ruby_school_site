@@ -1,0 +1,16 @@
+current directory: H:/Project/ruby_school_site/vendor/cache/ruby/2.3.0/gems/bindex-0.5.0/ext/bindex
+C:/RailsInstaller/Ruby2.3.3/bin/ruby.exe -r ./siteconf20190221-4136-r184jf.rb extconf.rb
+creating Makefile
+
+current directory: H:/Project/ruby_school_site/vendor/cache/ruby/2.3.0/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" clean
+
+current directory: H:/Project/ruby_school_site/vendor/cache/ruby/2.3.0/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR="
+generating cruby-i386-mingw32.def
+compiling cruby.c
+linking shared-object bindex/cruby.so
+
+current directory: H:/Project/ruby_school_site/vendor/cache/ruby/2.3.0/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20190221-4136-95jyyb/bindex

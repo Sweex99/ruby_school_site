@@ -7,14 +7,16 @@ class RemoteStudyController < ApplicationController
   end
 
   def show
-    @task = RemoteStudy.where(:class_room => current_user.class_room, :Subject => params[:id])
+    @task = RemoteStudy.where(:class_room => current_user.class_room)
   end
 
   def new
-
+    @task = RemoteStudy.new
   end
 
   def create
+    @task = RemoteStudy.new(post_params)
+    redirect_to @task if @task.save
   end
 
   def edit
@@ -24,5 +26,11 @@ class RemoteStudyController < ApplicationController
   end
 
   def destroy
+  end
+
+  private
+
+  def post_params
+    params.require(:remote_study).permit(:title, :Subject, :class_room,:body, :Ylink, :Slink)
   end
 end

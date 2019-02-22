@@ -1,0 +1,29 @@
+<%= form_for @task, url: remote_study_index_path  do |f| %>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title, :required => true %>
+  </div>
+  <div>
+    <%= f.label 'Предмет' %>
+    <%= f.text_field :Subject %>
+  </div>
+  <div>
+    <%= f.label 'Клас' %>
+    <%= f.text_field :class_room %>
+  </div>
+  <div>
+    <%= f.label 'Опис' %>
+    <%= f.text_area :body, :class => 'ckeditor' %>
+  </div>
+  <div>
+    <%= f.label 'Силка на YouTube' %>
+    <%= f.text_field :Ylink %>
+  </div>
+  <div>
+    <%= f.label 'Силка на Сайт' %>
+    <%= f.text_field :Slink %>
+  </div>
+  <div>
+    <%= f.submit "Створити Завдання" %>
+  </div>
+<% end %>
