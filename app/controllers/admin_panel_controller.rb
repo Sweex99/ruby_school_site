@@ -41,10 +41,12 @@ class AdminPanelController < ApplicationController
     end
   end
 
-  def add_teacher
-    @teacher = User.create(name: params[:name], email: params[:email])
-    @teacher.remove_role user.roles.last
-    user.add_role(:teacher)
+  def  new_teacher_student
+    @user = User.all
+  end
+
+  def add_role
+    UserRole.create(:id_user => params[:id_user], :role => params[:role], :class_room => params[:class_room])
     respond_to do |format|
       format.html { redirect_to new_year_path, notice: 'Task was successfully destroyed.' }
       format.json { head :no_content }
