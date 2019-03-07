@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-class Users::SessionsController < Devise::SessionsController
+class Users::SessionsController <
+    Devise::SessionsController
   # before_action :configure_sign_in_params, only: [:create]
 
   # GET /resource/sign_in
@@ -10,17 +11,13 @@ class Users::SessionsController < Devise::SessionsController
 
   # POST /resource/sign_in
   def create
-    unless Stat.where(:id_user => current_user.id)
-      Stat.create(:id_user => current_user.id)
-    end
+    Stat.create(:id_user => current_user.id)
   end
 
   # DELETE /resource/sign_out
   def destroy
-    if Stat.where(:id_user => current_user.id)
-      Stat.where(:id_user => current_user.id).destroy_all
-      sign_out_and_redirect(current_user)
-    end
+    Stat.where(:id_user => current_user.id).destroy_all
+    sign_out_and_redirect(current_user)
   end
 
   # protected
