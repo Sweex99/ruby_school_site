@@ -3,11 +3,9 @@
 one:
   title: MyString
   body: MyString
-  date: 2018-08-27
   who: MyString
 
 two:
   title: MyString
   body: MyString
-  date: 2018-08-27
   who: MyString

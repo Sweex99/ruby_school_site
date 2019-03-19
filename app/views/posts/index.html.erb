@@ -3,6 +3,8 @@
   <br>
 <% end %>
 <br>
+
+
 <% @shows.each do |show| %>
   <div class="card border-secondary mb-3" style="max-width: 51rem;">
     <div class="card-header"><%= link_to show.title, post_path(show.id) %>
@@ -17,7 +19,7 @@
       <p class="card-text"><%= raw(show.body) %><br>
         Some quick example text to build on the card title and make up the bulk of the card's content.</p>
     </div>
-    <div class="card-footer"><%= link_to User.find(show.who).name, show_user_show_path(id:1), class: 'badge badge-pill badge-success' %><form class="float-right"><%= show.updated_at.strftime('%m-%d-%Y') %>" "<%= @online %></form></div>
+    <div class="card-footer"><%= link_to User.find(1).name, show_user_show_path(id:1), class: 'badge badge-pill badge-success' %><form class="float-right"><%= show.updated_at.strftime('%m-%d-%Y') %><%= @online %></form></div>
   </div>
 <% end %>
 

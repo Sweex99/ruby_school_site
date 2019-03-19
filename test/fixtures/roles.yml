@@ -1,11 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  integer: 
-  string: 
-  integer: 
-
-two:
-  integer: 
-  string: 
-  integer: 
+one: {}
+# column: value
+#
+two: {}
+# column: value

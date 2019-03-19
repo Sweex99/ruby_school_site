@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  integer: 
-  string: 
-  integer: 
+  id_user: 1
+  role: admin
+  class_room: 0
 
 two:
-  integer: 
-  string: 
-  integer: 
+  id_user: 2
+  role: student
+  class_room: 5

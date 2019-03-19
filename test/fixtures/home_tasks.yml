@@ -4,10 +4,12 @@ one:
   description: MyString
   subject: MyString
   class_room: 1
-  week: 1
+  day_by_week: MyString
+  date_task: 2019-02-02
 
 two:
   description: MyString
   subject: MyString
   class_room: 1
-  week: 1
+  day_by_week: MyString
+  date_task: 2019-02-02

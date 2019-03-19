@@ -1,13 +1,14 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  integer: 
-  string: 
-  date: 
-  string: 
+  student_id: 1
+  body: MyString
+  when: 2019-02-02
+  who: MyString
 
 two:
-  integer: 
-  string: 
-  date: 
-  string: 
+  student_id: 1
+  body: MyString
+  when: 2019-02-02
+  who: MyString
+

@@ -2,16 +2,21 @@
 
 class Users::SessionsController <
     Devise::SessionsController
+  layout 'sessionorregister'
   # before_action :configure_sign_in_params, only: [:create]
 
   # GET /resource/sign_in
-  # def new
-  #   super
-  # end
+   #def new
+   #  super
+   #end
+
 
   # POST /resource/sign_in
   def create
-    Stat.create(:id_user => current_user.id)
+    if user_signed_in? and Stat.where(:id_user => current_user.id)
+      Stat.create(:id_user => current_user.id)
+      redirect_to root_path
+    end
   end
 
   # DELETE /resource/sign_out

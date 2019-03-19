@@ -11,6 +11,12 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:account_update) { |u| u.permit(:name, :email, :password, :current_password) }
   end
 
+  before_action :set_user
+
+  def set_user
+    @user = User.new
+  end
+
   private
 
   def must_be_admin
@@ -18,5 +24,29 @@ class ApplicationController < ActionController::Base
       redirect_to root_path, notice: "Some message"
     end
   end
+
+  private
+
+
+
+  def resource_name
+    :user
+  end
+  helper_method :resource_name
+
+  def resource
+    @resource ||= User.new
+  end
+  helper_method :resource
+
+  def devise_mapping
+    @devise_mapping ||= Devise.mappings[:user]
+  end
+  helper_method :devise_mapping
+
+  def resource_class
+    User
+  end
+  helper_method :resource_class
 
 end

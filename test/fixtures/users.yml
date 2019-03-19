@@ -4,8 +4,20 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
-#
-two: {}
-# column: value
+one:
+  name: MyName
+  email: email@gmail.com
+  encrypted_password: <%= User.new.send(:password_digest, '1234') %>
+  confirmed_at: <%= Time.zone.now - 1.hour %>
+  confirmation_sent_at: <%= Time.zone.now - 2.hours %>
+  class_room: 5
+
+
+two:
+  name: Name
+  email: email2@gmail.com
+  encrypted_password: <%= User.new.send(:password_digest, '1234') %>
+  confirmed_at: <%= Time.zone.now - 1.hour %>
+  confirmation_sent_at: <%= Time.zone.now - 2.hours %>
+  class_room: 8
+
