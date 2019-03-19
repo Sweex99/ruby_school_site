@@ -5,61 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fdde501e-f3ad-4ce8-ba5f-49bfa5ae2d29" name="Default Changelist" comment="m">
-      <change afterPath="$PROJECT_DIR$/app/javascript/packs/vueapp.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/layouts/sessionorregister.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/users/registrations/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/admin_panel.coffee" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/home_works.coffee" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/pdfs.coffee" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/pocts.coffee" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/posts.coffee" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/remote_study.coffee" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/show_user.coffee" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/student_report.coffee" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/study.coffee" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/admin_panel.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/bootswatch.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/bootswatch.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/home_works.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/pdfs.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/pocts.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/posts.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/remote_study.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/scaffolds.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/show_user.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/student_report.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/study.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/users/registrations_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users/registrations_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/users/sessions_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users/sessions_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/subject.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/posts/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/posts/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/users/sessions/create.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/sessions/create.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20190112154245_create_ckeditor_assets.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/controllers/pocts_controller_test.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/fixtures/home_tasks.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/home_tasks.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/fixtures/home_works.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/fixtures/pocts.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/fixtures/posts.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/posts.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/fixtures/reports.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/reports.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/fixtures/roles.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/roles.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/fixtures/subjects.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/fixtures/user_roles.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/user_roles.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/fixtures/users.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/users.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/models/home_task_test.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/models/poct_test.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/cache/concurrent-ruby-1.1.4.gem" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/cache/i18n-1.5.3.gem" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -154,18 +101,22 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/posts/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
+            <state relative-caret-position="347">
               <caret line="21" column="198" selection-start-line="21" selection-start-column="198" selection-end-line="21" selection-end-column="198" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/users/sessions/destroy.html.erb">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="43" column="9" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -274,7 +225,6 @@
         <option value="$PROJECT_DIR$/test/fixtures/roles.yml" />
         <option value="$PROJECT_DIR$/test/fixtures/user_roles.yml" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/test/fixtures/users.yml" />
         <option value="$PROJECT_DIR$/app/javascript/packs/hello_vue.js" />
         <option value="$PROJECT_DIR$/app/views/layouts/modal_window.html.erb" />
@@ -293,6 +243,7 @@
         <option value="$PROJECT_DIR$/app/views/layouts/sessionorregister.html.erb" />
         <option value="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/posts/index.html.erb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
       </list>
     </option>
   </component>
@@ -682,12 +633,12 @@
       <workItem from="1552681621412" duration="8429000" />
       <workItem from="1552737595105" duration="15983000" />
       <workItem from="1552819415430" duration="10444000" />
-      <workItem from="1552910931622" duration="17992000" />
+      <workItem from="1552910931622" duration="19248000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="958041000" />
+    <option name="totallyTimeSpent" value="959297000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -702,7 +653,7 @@
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49917898" visible="true" weight="0.2397882" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49917898" visible="true" weight="0.2397882" />
       <window_info id="Structure" order="1" sideWeight="0.501292" side_tool="true" weight="0.16944024" />
       <window_info id="Favorites" order="2" sideWeight="0.500821" side_tool="true" weight="0.16944024" />
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.32840723" />
@@ -715,9 +666,9 @@
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32569557" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" sideWeight="0.49848714" weight="0.32718894" />
-      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.4969743" weight="0.32569557" />
+      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.4969743" weight="0.32565284" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5136157" side_tool="true" weight="0.27332243" />
-      <window_info anchor="bottom" x="22" y="111" width="1322" height="505" id="Terminal" order="12" sideWeight="0.5015129" side_tool="true" visible="true" weight="0.31336406" />
+      <window_info anchor="bottom" x="22" y="111" width="1322" height="505" id="Terminal" order="12" sideWeight="0.5015129" side_tool="true" weight="0.8986175" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -891,13 +842,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/home_works_controller.rb">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="924">
-          <caret line="42" column="15" selection-start-line="42" selection-start-column="15" selection-end-line="42" selection-end-column="15" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/_modal_window.html.erb" />
     <entry file="file://$PROJECT_DIR$/.browserslistrc">
@@ -1086,8 +1030,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/posts/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
+        <state relative-caret-position="347">
           <caret line="21" column="198" selection-start-line="21" selection-start-column="198" selection-end-line="21" selection-end-column="198" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="43" column="9" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
         </state>
       </provider>
     </entry>
