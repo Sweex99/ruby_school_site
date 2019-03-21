@@ -4,11 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/app/views/admin_panel/new_teacher_student.html.erb" line="5" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fdde501e-f3ad-4ce8-ba5f-49bfa5ae2d29" name="Default Changelist" comment="m">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/posts/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/posts/index.html.erb" afterDir="false" />
-    </list>
+    <list default="true" id="fdde501e-f3ad-4ce8-ba5f-49bfa5ae2d29" name="Default Changelist" comment="m" />
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
     <ignored path="$PROJECT_DIR$/public/system/" />
@@ -87,7 +83,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/posts/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="43">
+            <state relative-caret-position="1">
               <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
             </state>
           </provider>
@@ -618,12 +614,12 @@
       <workItem from="1552819415430" duration="10444000" />
       <workItem from="1552910931622" duration="25106000" />
       <workItem from="1553103528623" duration="627000" />
-      <workItem from="1553116380307" duration="4882000" />
+      <workItem from="1553116380307" duration="5437000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="970664000" />
+    <option name="totallyTimeSpent" value="971219000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -652,7 +648,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" sideWeight="0.49848714" weight="0.32718894" />
       <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.4969743" weight="0.32565284" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5136157" side_tool="true" weight="0.27332243" />
-      <window_info active="true" anchor="bottom" x="22" y="111" width="1322" height="505" id="Terminal" order="12" sideWeight="0.5015129" side_tool="true" visible="true" weight="0.20122887" />
+      <window_info active="true" anchor="bottom" x="22" y="111" width="1322" height="505" id="Terminal" order="12" sideWeight="0.5015129" side_tool="true" visible="true" weight="0.94930875" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -1023,7 +1019,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/posts/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="43">
+        <state relative-caret-position="1">
           <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
         </state>
       </provider>
