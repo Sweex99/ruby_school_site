@@ -3,7 +3,9 @@
   <br>
 <% end %>
 <br>
-
+<% if Post.find(1) %>
+  <p>asd</p>
+<% end %>
 
 <% @shows.each do |show| %>
   <div class="card border-secondary mb-3" style="max-width: 51rem;">
