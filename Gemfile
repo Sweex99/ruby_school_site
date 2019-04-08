@@ -2,8 +2,12 @@ source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?('/')
-  "https://github.com/#{repo_name}.git"
+  "https://github.com/#{repo_name}.git  "
 end
+
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog-aws'
 
 gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 gem 'will_paginate-bootstrap'

@@ -10,10 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190318122720) do
+ActiveRecord::Schema.define(version: 20190405132134) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "ckeditor_assets", force: :cascade do |t|
+    t.string "data_file_name", null: false
+    t.string "data_content_type"
+    t.integer "data_file_size"
+    t.string "type", limit: 30
+    t.integer "width"
+    t.integer "height"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["type"], name: "index_ckeditor_assets_on_type"
+  end
 
   create_table "home_tasks", force: :cascade do |t|
     t.string "description"
@@ -25,6 +37,17 @@ ActiveRecord::Schema.define(version: 20190318122720) do
     t.date "date_task"
   end
 
+  create_table "home_works", force: :cascade do |t|
+    t.string "monday", null: false
+    t.string "tuesday", null: false
+    t.string "wednesday", null: false
+    t.string "thursday", null: false
+    t.string "friday", null: false
+    t.string "saturday", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "pdfs", force: :cascade do |t|
     t.string "title"
     t.string "description"
@@ -32,6 +55,14 @@ ActiveRecord::Schema.define(version: 20190318122720) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "path"
+  end
+
+  create_table "pocts", force: :cascade do |t|
+    t.string "title"
+    t.string "body"
+    t.string "who"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "posts", force: :cascade do |t|
@@ -74,10 +105,8 @@ ActiveRecord::Schema.define(version: 20190318122720) do
   end
 
   create_table "stats", force: :cascade do |t|
-    t.integer "id_user"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["id_user"], name: "index_stats_on_id_user", unique: true
   end
 
   create_table "user_roles", force: :cascade do |t|
@@ -102,6 +131,14 @@ ActiveRecord::Schema.define(version: 20190318122720) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "class_room", default: 5
+    t.string "avatar"
+    t.integer "sign_in_count", default: 0, null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.datetime "current_sign_out_at"
+    t.datetime "last_sign_out_at"
+    t.string "current_sign_in_ip"
+    t.string "last_sign_in_ip"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true

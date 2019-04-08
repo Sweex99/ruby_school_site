@@ -2,17 +2,17 @@ require 'test_helper'
 
 class HomeWorksControllerTest < ActionDispatch::IntegrationTest
   test 'should get index' do
-    get home_works_index_url
+    get home_works_url
     assert_response :success
   end
 
   test 'should get show' do
-    get home_works_show_url
+    get home_work_url
     assert_response :success
   end
 
   test 'should get edit' do
-    get home_works_edit_url
+    get edit_home_works_url
     assert_response :success
   end
 
@@ -27,7 +27,7 @@ class HomeWorksControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'should get new' do
-    get home_works_new_url
+    get new_home_works_url
     assert_response :success
   end
 

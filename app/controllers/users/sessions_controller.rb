@@ -13,16 +13,13 @@ class Users::SessionsController <
 
   # POST /resource/sign_in
   def create
-    if user_signed_in? and Stat.where(:id_user => current_user.id)
-      Stat.create(:id_user => current_user.id)
-      redirect_to root_path
-    end
+    super
   end
 
   # DELETE /resource/sign_out
   def destroy
-    Stat.where(:id_user => current_user.id).destroy_all
-    sign_out_and_redirect(current_user)
+    current_user.update_attribute(:last_sign_out_at, Time.now)
+    super
   end
 
   # protected
@@ -31,4 +28,6 @@ class Users::SessionsController <
   # def configure_sign_in_params
   #   devise_parameter_sanitizer.permit(:sign_in, keys: [:attribute])
   # end
+  #
+  #
 end
