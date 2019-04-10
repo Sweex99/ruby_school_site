@@ -12,6 +12,10 @@
     <%= f.text_field :who , :value => current_user.name%>
   </div>
   <div>
+    <%= f.label :logo %>
+    <%= f.file_field :logo %>
+  </div>
+  <div>
     <%= f.submit "Зберегти" %>
   </div>
 <% end %>

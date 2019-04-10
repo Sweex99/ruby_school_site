@@ -10,22 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190405132134) do
+ActiveRecord::Schema.define(version: 20190410153512) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "ckeditor_assets", force: :cascade do |t|
-    t.string "data_file_name", null: false
-    t.string "data_content_type"
-    t.integer "data_file_size"
-    t.string "type", limit: 30
-    t.integer "width"
-    t.integer "height"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["type"], name: "index_ckeditor_assets_on_type"
-  end
 
   create_table "home_tasks", force: :cascade do |t|
     t.string "description"
@@ -37,17 +25,6 @@ ActiveRecord::Schema.define(version: 20190405132134) do
     t.date "date_task"
   end
 
-  create_table "home_works", force: :cascade do |t|
-    t.string "monday", null: false
-    t.string "tuesday", null: false
-    t.string "wednesday", null: false
-    t.string "thursday", null: false
-    t.string "friday", null: false
-    t.string "saturday", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "pdfs", force: :cascade do |t|
     t.string "title"
     t.string "description"
@@ -57,20 +34,13 @@ ActiveRecord::Schema.define(version: 20190405132134) do
     t.string "path"
   end
 
-  create_table "pocts", force: :cascade do |t|
-    t.string "title"
-    t.string "body"
-    t.string "who"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.string "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "who"
+    t.string "logo"
   end
 
   create_table "remote_studies", force: :cascade do |t|
