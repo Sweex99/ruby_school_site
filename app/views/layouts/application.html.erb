@@ -35,6 +35,9 @@
       <li class="nav-item">
         <a class="nav-link" href="#">Фотоальбом</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Колектив</a>
+      </li>
     </ul>
     <div id="root">
       <my-modal v-if="showLoginModal" @close="showLoginModal=false">
@@ -63,7 +66,7 @@
       <ul class="navbar-nav pull-xs-right">
         <% if user_signed_in? %>
           <li class="nav-item">
-            <%= image_tag current_user.avatar.url, size: '50x50', class: 'bl' %>
+            <%= image_tag current_user.avatar.url, class: 'bl' %>
           </li>
           <li class="nav-item">
             <%= link_to current_user.name, edit_user_registration_path, class: "nav-link" %>

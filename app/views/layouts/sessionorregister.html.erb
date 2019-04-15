@@ -27,7 +27,7 @@
 
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="<%= posts_path %>">Home  <span class="badge badge-primary badge-pill">+10000</span><span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="<%= posts_path %>">Новини  <span class="badge badge-primary badge-pill">+10000</span><span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="<%= pdfs_path %>">Файли</a>
@@ -42,6 +42,9 @@
       </my-modal>
       <ul class="navbar-nav pull-xs-right">
         <% if user_signed_in? %>
+          <li class="nav-item">
+            <%= image_tag current_user.avatar.url, class: 'bl' %>
+          </li>
           <li class="nav-item">
             <%= link_to current_user.name, edit_user_registration_path, class: "nav-link" %>
           </li>

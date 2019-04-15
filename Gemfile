@@ -10,8 +10,6 @@ gem 'mini_magick'
 gem 'fog-aws'
 gem 'asset_sync'
 
-gem 'yarn'
-
 gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 gem 'will_paginate-bootstrap'
 

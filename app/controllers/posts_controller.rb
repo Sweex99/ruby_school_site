@@ -29,7 +29,7 @@ class PostsController < ApplicationController
   end
 
   def index
-    @shows = Post.order(created_at: :desc).paginate(page: params[:page], per_page: 1)
+    @shows = Post.order(created_at: :desc).paginate(page: params[:page], per_page: 15)
   end
 
   def show
