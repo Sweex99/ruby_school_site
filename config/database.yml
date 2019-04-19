@@ -17,9 +17,10 @@
 development:
   adapter: postgresql
   encoding: unicode
+  host: localhost
   database: development
   pool: 5
-  username: postgres
+  username: rss
   password: 1234
   timeout: 5000
 
@@ -47,8 +48,9 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
+  host: localhost
   database: demo_test_test
   pool: 5
-  username: postgres
+  username: rss
   password: 1234
   timeout: 5000

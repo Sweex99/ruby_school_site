@@ -5,6 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git  "
 end
 
+gem 'ckeditor'
+
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog-aws'
@@ -46,7 +48,7 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'webpacker'
-gem 'yarn'
+#gem 'yarn'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

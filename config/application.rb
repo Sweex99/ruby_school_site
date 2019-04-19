@@ -7,6 +7,7 @@ Bundler.require(*Rails.groups)
 
 module Study
   class Application < Rails::Application
+    config.autoload_paths += %w(#{config.root}/app/models/ckeditor)
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
     # Settings in config/environments/* take precedence over those specified here.
