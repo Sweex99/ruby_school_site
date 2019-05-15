@@ -4,8 +4,10 @@ one:
   title: MyString
   body: MyString
   who: MyString
+  logo: nil
 
 two:
   title: MyString
   body: MyString
   who: MyString
+  logo: nil

@@ -1,9 +1,26 @@
 <div class="jumbotron">
-<% @task.each do |t| %>
-  <p><%= t.body.html_safe %></p>
-    <p><a href="https://youtu.be/8EbgoLXA2t4">asd</a></p>
+  <% @task.each do |t| %>
+    <div class="card">
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1"><%= t.title %></h5>
+            <small>Активне до: <%= t.active_to %></small>
+          </div>
+          <p class="mb-1"><%= t.body.html_safe %></p>
+        </a>
+        <small>Прикріплення:
+          <% unless t.youtube_link.nil? or t.youtube_link.empty? %>
+            <%= link_to "shop", t.youtube_link, class: 'material-icons', target: :_blank, title: 'Youtube' %>
+          <% end %>
+          <% unless t.site_link.nil? or t.youtube_link.empty? %>
+            <%= link_to "description", t.site_link, class: 'material-icons', target: :_blank, title: 'Силка на Сайт' %>
+          <% end %>
+        </small>
+      </div>
+    </div></br>
   <% end %>
 </div>
-<%= link_to 'asdadasdasda', new_remote_study_path() %>
-<%= debug(params) %>
+
+<%= link_to "note_add", new_remote_study_path(), class: 'material-icons' %>
 

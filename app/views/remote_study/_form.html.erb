@@ -1,11 +1,11 @@
 <%= form_for @task, url: remote_study_index_path  do |f| %>
   <div>
-    <%= f.label :title %>
-    <%= f.text_field :title, :required => true %>
+    <%= f.label "Заголовок" %>
+    <%= f.text_field :title %>
   </div>
   <div>
     <%= f.label 'Предмет' %>
-    <%= f.text_field :Subject %>
+    <%= f.text_field :subject, value: params[:format] %>
   </div>
   <div>
     <%= f.label 'Клас' %>
@@ -17,11 +17,16 @@
   </div>
   <div>
     <%= f.label 'Силка на YouTube' %>
-    <%= f.text_field :Ylink %>
+    <%= f.text_field :youtube_link %>
   </div>
   <div>
     <%= f.label 'Силка на Сайт' %>
-    <%= f.text_field :Slink %>
+    <%= f.text_field :site_link %>
+  </div>
+  <div>
+    <%= f.label 'Активний до:' %>
+    <%= f.date_select :active_to, default: Date.tomorrow, :use_month_names => ["Січень", "Лютий", "Березень","Квітень","Травень","Червень","Липень",
+                                                                                        "Серпень","Вересень","Жовтень","Лиспопад", "Грудень"] %>
   </div>
   <div>
     <%= f.submit "Створити Завдання" %>

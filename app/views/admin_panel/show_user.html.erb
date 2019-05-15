@@ -5,13 +5,13 @@
   <div class="card-body">
     <p class="card-text"><br>
       <% @users.each do |user| %>
-        <%= user.id %>
+        <span class="idAdmin"><%= user.id %></span>
         Ім'я: <%= user.name %>
         Клас: <%= user.class_room %>
         <% if user.has_role? :admin %>
-          <%= link_to "Забрати права", delete_admin_path(user.id), method: :get %>
+          <%= link_to "Забрати права", delete_admin_path(user.id), method: :get, remote: true, class: 'blk', id: "#{user.id}" %>
         <% else %>
-          <%= link_to "Зробити адміном", add_admin_path(user.id), method: :get %>
+          <%= link_to "Зробити адміном", add_admin_path(user.id), method: :get, remote: true, class: 'blk', id: "#{user.id}" %>
         <% end %>
         <br>
       <% end %>

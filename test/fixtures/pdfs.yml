@@ -4,8 +4,10 @@ one:
   title: MyString
   description: MyString
   author: MyString
+  path: MyString
 
 two:
   title: MyString
   description: MyString
   author: MyString
+  path: MyString

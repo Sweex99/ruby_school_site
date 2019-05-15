@@ -5,7 +5,9 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git  "
 end
 
-gem 'ckeditor'
+gem 'redis'
+gem 'sidekiq'
+gem 'sidekiq-cron'
 
 gem 'carrierwave'
 gem 'mini_magick'
@@ -21,6 +23,8 @@ gem 'dotenv'
 gem 'rolify'
 
 gem 'pg'
+
+gem 'jquery-rails'
 
 gem 'bootstrap', '~> 4.1.3'
 gem 'twitter-bootstrap-rails'
@@ -47,7 +51,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-gem 'webpacker'
+#gem 'webpacker'
 #gem 'yarn'
 
 # Use Capistrano for deployment

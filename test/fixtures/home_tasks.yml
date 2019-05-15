@@ -5,11 +5,11 @@ one:
   subject: MyString
   class_room: 1
   day_by_week: MyString
-  date_task: 2019-02-02
+  date_task: <%= Date.tomorrow %>
 
 two:
   description: MyString
   subject: MyString
   class_room: 1
   day_by_week: MyString
-  date_task: 2019-02-02
+  date_task: <%= Date.tomorrow %>

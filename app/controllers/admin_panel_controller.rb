@@ -6,25 +6,29 @@ class AdminPanelController < ApplicationController
   end
 
   def show_user
-    @users = User.all
+    @users = User.all.where.not(id: current_user.id)
   end
 
   def add_admin
     user = User.find(params[:id])
     user.remove_role user.roles.last # user only has one role
     user.add_role(:admin)
+
     respond_to do |format|
-      format.html { redirect_to show_user_path, notice: 'Task was successfully add.' }
-      format.json { head :no_content }
+      format.html {redirect_to request.referrer, notice: 'Task was successfully add.'}
+      format.js
+      format.json {head :no_content}
     end
   end
 
   def delete_admin
     user = User.find(params[:id])
-    user.remove_role :admin # user only has one role
+    user.remove_role :admin
+
     respond_to do |format|
-      format.html { redirect_to show_user_path, notice: 'Task was successfully destroyed.' }
-      format.json { head :no_content }
+        format.html {redirect_to request.referrer, notice: 'Task was successfully destroyed.'}
+        format.js
+        format.json {head :no_content}
     end
   end
 
@@ -36,20 +40,20 @@ class AdminPanelController < ApplicationController
     User.update_all('class_room = class_room + 1')
 
     respond_to do |format|
-      format.html { redirect_to new_year_path, notice: 'Task was successfully destroyed.' }
-      format.json { head :no_content }
+      format.html {redirect_to new_year_path, notice: 'Task was successfully destroyed.'}
+      format.json {head :no_content}
     end
   end
 
-  def  new_teacher_student
+  def new_teacher_student
     @user = User.all
   end
 
   def add_role
     UserRole.create(:id_user => params[:id_user], :role => params[:role], :class_room => params[:class_room])
     respond_to do |format|
-      format.html { redirect_to new_year_path, notice: 'Task was successfully destroyed.' }
-      format.json { head :no_content }
+      format.html {redirect_to new_year_path, notice: 'Task was successfully destroyed.'}
+      format.json {head :no_content}
     end
   end
 

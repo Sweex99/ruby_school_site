@@ -1,0 +1,10 @@
+<div class="card">
+<% @user.each do |u| %>
+<div class="card-text">
+  <%= image_tag(u.avatar) %>
+  <%= u.name %>
+  <%= u.email %>
+</div>
+    <div class="d-none">asdasd</div>
+<% end %>
+</div>
