@@ -12,7 +12,7 @@
 //
 //= require_self
 //= require jquery
+//= require jquery.turbolinks
 //= require rails-ujs
-//= require turbolinks
 //= require admin_panel
 //= require_tree .

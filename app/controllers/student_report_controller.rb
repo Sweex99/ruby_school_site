@@ -30,6 +30,8 @@ class StudentReportController < ApplicationController
         params[:start_date]['when(1i)']).to_s
     @report = Report.create(:student_id => params[:student_id], :body => params[:report][:body], :when => data, :who => params[:report][:who])
 
+    ReportMailer.reports_mailer.deliver
+
     redirect_to student_report_index_path if @report.save
   end
 

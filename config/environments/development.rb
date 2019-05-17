@@ -8,6 +8,9 @@ Rails.application.configure do
 
   config.require_master_key = true
 
+  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.delivery_method = :sendmail
+
   # Do not eager load code on boot.
   config.eager_load = false
 

@@ -11,13 +11,13 @@ class PdfsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get new" do
-    get new_pdf_url
+    get new_pdf_url(@pdf)
     assert_response :success
   end
 
   test "should create pdf" do
     assert_difference('Pdf.count') do
-      post pdfs_url, params: { pdf: {  } }
+      post pdfs_url(pdf: { title: @pdf.title, description: @pdf.description, author: @pdf.author, path: @pdf.path })
     end
 
     assert_redirected_to pdf_url(Pdf.last)
@@ -34,7 +34,7 @@ class PdfsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update pdf" do
-    patch pdf_url(@pdf), params: { pdf: {  } }
+    patch pdf_url( id: @pdf.id ,pdf: { title: @pdf.title, description: @pdf.description })
     assert_redirected_to pdf_url(@pdf)
   end
 

@@ -29,7 +29,9 @@ class PdfsController < ApplicationController
   end
 
   # GET /pdfs/1/edit
-  def edit; end
+  def edit
+    @pdf = Pdf.find(params[:id])
+  end
 
   # POST /pdfs
   # POST /pdfs.json
@@ -38,10 +40,10 @@ class PdfsController < ApplicationController
 
     # save file in public folder
     uploaded_io = params[:pdf][:path]
-    File.open(Rails.root.join('public', 'uploaded_pdf', uploaded_io.original_filename), 'wb') do |file|
-      file.write(uploaded_io.read)
+    File.open(Rails.root.join('public', 'uploaded_pdf', uploaded_io.to_s), 'wb') do |file|
+      file.write(uploaded_io.to_s.read)
     end
-    @pdf.path = uploaded_io.original_filename
+    @pdf.path = uploaded_io.to_s
 
     redirect_to pdfs_path, notice: 'Файл успішно добавлено' if @pdf.save
   end
@@ -49,8 +51,9 @@ class PdfsController < ApplicationController
   # PATCH/PUT /pdfs/1
   # PATCH/PUT /pdfs/1.json
   def update
+    @pdf = Pdf.find(params[:id])
     respond_to do |format|
-      if @pdf.update(pdf_params)
+      if @pdf.update_attributes(pdf_params)
         format.html { redirect_to @pdf, notice: 'Pdf was successfully updated.' }
         format.json { render :show, status: :ok, location: @pdf }
       else

@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  before_create :set_default_avatar
+
   mount_uploader :avatar, AvatarUploader
   rolify
 
@@ -17,6 +19,10 @@ class User < ApplicationRecord
     else
       false
     end
+  end
+
+  def set_default_avatar
+    nil ? 'default_avatar' : ''
   end
 
   protected

@@ -5,11 +5,11 @@
   </div>
   <div>
     <%= f.label :body %>
-    <%= f.cktext_area :body, :class => 'ckeditor' %>
+    <%= f.text_field :body, :class => 'ckeditor' %>
   </div>
   <div>
     <%= f.label :who %>
-    <%= f.text_field :who , :value => current_user.name%>
+    <%= f.text_field :who , :value => @user_name %>
   </div>
   <div>
     <%= f.label :logo %>
