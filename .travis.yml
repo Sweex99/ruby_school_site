@@ -8,5 +8,3 @@ before_install:
   - gem install bundler
   - bundle update rails
   - bundle install
-  - rake db:setup
-  - rake db:migrate
