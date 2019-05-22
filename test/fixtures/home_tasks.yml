@@ -3,13 +3,13 @@
 one:
   description: MyString
   subject: MyString
-  class_room: 1
+  class_room: 5
   day_by_week: MyString
   date_task: <%= Date.tomorrow %>
 
 two:
   description: MyString
   subject: MyString
-  class_room: 1
+  class_room: 5
   day_by_week: MyString
   date_task: <%= Date.tomorrow %>

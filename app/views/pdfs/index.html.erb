@@ -5,11 +5,12 @@
   <div class="card border-secondary">
     <div class="card-header"><%= pdf.title %> (<%= pdf.updated_at.strftime('%m-%d-%Y') %>)
       <% if user_signed_in? && (current_user.has_role? :admin) %>
-        <%= link_to "cancel", pdfs_url(pdf.id), method: :delete, data: {confirm: 'Ви впевнені?'}, class: 'float-right material-icons' %>
+        <%= link_to "cancel", pdf_path(pdf.id), method: :delete, data: {confirm: 'Ви впевнені?'}, class: 'float-right material-icons', authenticity_token: true %>
       <% end %>
     </div>
     <div class="card-body">
-        <%= image_tag("#{@file[pdf.path.split('.').last]}", :alt => "#{pdf.path.split('.').last}", :style => 'float: left; margin : 13px') %>      <p class="card-text"><%= pdf.description %><br>
+        <%= image_tag("#{@file[pdf.path.split('.').last]}", :alt => "#{pdf.path.split('.').last}", :style => 'float: left; margin : 13px') %>
+      <p class="card-text"><%= pdf.description %><br>
     </div>
     <div class="card-footer">
     <% if pdf.path.split('.').last == 'pdf' %>

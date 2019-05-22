@@ -24,8 +24,6 @@ Rails.application.routes.draw do
     end
   end
 
-  delete '/pdfs/:id', to: 'pdfs#destroy'
-
   resources :home_works
 
   get 'posts/new'

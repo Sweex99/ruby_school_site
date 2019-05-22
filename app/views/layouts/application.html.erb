@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Зборянська ЗОШ</title>
-  <%= javascript_include_tag 'application', media: 'all', 'data-turbolinks-track' => 'reload' %>
+  <%= javascript_include_tag 'application', media: 'all', 'data-turbolinks-track' => 'reload'%>
   <%= stylesheet_link_tag 'bootswatch', media: 'all', 'data-turbolinks-track' => 'reload' %>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -41,7 +41,7 @@
       <ul class="navbar-nav pull-xs-right">
         <% if user_signed_in? %>
           <li class="nav-item">
-            <%= link_to image_tag(current_user.avatar.url, class: 'bl'), edit_user_registration_path %>
+            <%= link_to image_tag(current_user.avatar.url, class: 'bl', style: 'background-color: #18BC9C;'), edit_user_registration_path %>
           </li>
           <li class="nav-item">
             <%= link_to current_user.name, edit_user_registration_path, class: "nav-link" %>
@@ -51,7 +51,7 @@
           </li>
         <% else %>
           <li class="nav-item">
-            <%= link_to "Вхід", new_user_session_path, class: "nav-link", id: 'login', :@click => "showLoginModal=true" %>
+            <%= link_to "Увійти", new_user_session_path, class: "nav-link", id: 'login', :@click => "showLoginModal=true" %>
 
           </li>
           <li class="nav-item">

@@ -1,5 +1,5 @@
 class PdfsController < ApplicationController
-  # before_action :set_pdf, only: [:show, :edit, :update, :destroy]
+  before_action :set_pdf, only: [:show, :edit, :update, :destroy]
 
   # GET /pdfs
   # GET /pdfs.json
@@ -40,10 +40,10 @@ class PdfsController < ApplicationController
 
     # save file in public folder
     uploaded_io = params[:pdf][:path]
-    File.open(Rails.root.join('public', 'uploaded_pdf', uploaded_io.to_s), 'wb') do |file|
-      file.write(uploaded_io.to_s.read)
+    File.open(Rails.root.join('public', 'uploaded_pdf', uploaded_io.original_filename), 'wb') do |file|
+      file.write(uploaded_io.read)
     end
-    @pdf.path = uploaded_io.to_s
+    @pdf.path = uploaded_io.original_filename
 
     redirect_to pdfs_path, notice: 'Файл успішно добавлено' if @pdf.save
   end

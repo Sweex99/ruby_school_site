@@ -3,11 +3,11 @@
     <div class="col-lg-4">
       <div class="card border-primary mb-3" style="max-width: 15rem;">
         <div class="card-header">
-          <div class="text-center"><%= @subjects[i][0] %><%= link_to "note_add", new_remote_study_path(@subjects[i][1]), method: 'post', class: 'material-icons float-right' %></div>
+          <div class="text-center"><%= @subjects[i][0] %><%= link_to "note_add", new_remote_study_path(@subjects[i][1]), class: 'material-icons float-right' %></div>
         </div>
         <div class="card-body">
           <h4 class="card-title">
-            <div class="text-center">Завдання: <%= RemoteStudy.where(subject: @subjects[i][1], active: true, class_room: current_user.class_room).count %></div>
+            <div class="text-center">Завдання: <%= count_task_for_each_user(i) %></div>
           </h4>
           <p class="card-text">
           <div class="text-center">

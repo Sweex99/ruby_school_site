@@ -29,7 +29,7 @@ class HomeWorksController < ApplicationController
   def update
     @home_task = HomeTask.find(params[:id])
     if @home_task.update_attributes(home_task_params)
-      redirect_to @home_task
+      redirect_to :home_work
     else
       render :edit
     end
@@ -64,7 +64,7 @@ class HomeWorksController < ApplicationController
 
 
   def home_task_params
-    @permit = params.require(:home_task).permit(:subject, :description, :date_task)
+    params.require(:home_task).permit(:subject, :description, :date_task)
   end
 
   def get_home_task(day, type_day)

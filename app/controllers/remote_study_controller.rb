@@ -12,7 +12,7 @@ class RemoteStudyController < ApplicationController
 
   def new
     @task = RemoteStudy.new
-    @sub = @subjects
+
   end
 
   def create
@@ -34,4 +34,5 @@ class RemoteStudyController < ApplicationController
   def post_params
     params.require(:remote_study).permit(:title, :subject, :class_room, :body, :youtube_link, :site_link, :active_to)
   end
+
 end

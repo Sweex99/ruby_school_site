@@ -8,6 +8,6 @@ class StudyController < ApplicationController
     @title2 = 'Кастомізувати форми devis-у'
     @title3 = 'Реалізувати сторінку "Домашнє завдання"'
     @title4 = 'Рейтинг вчителів (root)'
-    @title5 = ''
+    @title5 = 'Telegram::Bot::UpdatesPoller.new(Telegram.bots[:default], TelegramWebhooksController).start'
   end
 end
