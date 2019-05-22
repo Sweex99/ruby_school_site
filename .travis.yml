@@ -1,4 +1,12 @@
 language: ruby
+install: gem install rails
 branches:
   only:
     - travis
+before_install:
+  - gem update --system
+  - gem install bundler
+  - bundle update rails
+  - bundle install
+  - rake db:setup
+  - rake db:migrate
