@@ -58,16 +58,16 @@ Rails.application.configure do
   # config.cache_store = :mem_cache_store
 
 
-  config.action_mailer.default_url_options = { host: 'rschool.herokuapp.com', host: 3000 }
+  config.action_mailer.default_url_options = { host: 'rschool.herokuapp.com', protocol: 'https' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
   config.action_mailer.default :charset => "utf-8"
   config.action_mailer.smtp_settings = {
       user_name: 'swex99@gmail.com',
       password: 'numlock09',
       address: 'smtp.gmail.com',
-      port: '587',
+      port: 587,
       domain: "rschool.herokuapp.com",
       authentication: :plain,
       enable_starttls_auto: true
