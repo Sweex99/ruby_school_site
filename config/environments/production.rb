@@ -63,15 +63,15 @@ Rails.application.configure do
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.default :charset => "utf-8"
-  config.action_mailer.smtp_settings = {
-      user_name: 'swex99@gmail.com',
-      password: 'numlock09',
-      address: 'smtp.gmail.com',
-      port: 587,
-      domain: "rschool.herokuapp.com",
-      authentication: :plain,
-      enable_starttls_auto: true
-  }
+  # config.action_mailer.smtp_settings = {
+  #     user_name: 'swex99@gmail.com',
+  #     password: 'numlock09',
+  #     address: 'smtp.gmail.com',
+  #     port: 587,
+  #     domain: "rschool.herokuapp.com",
+  #     authentication: :plain,
+  #     enable_starttls_auto: true
+  # }
   # Use a real queuing backend for Active Job (and separate queues per environment)
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "Study_#{Rails.env}"
