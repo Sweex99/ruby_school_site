@@ -2,7 +2,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    redirect_to @post if @post.save
+    redirect_to posts_path, notice: 'Новина була успішно створена' if @post.save
   end
 
   def new
@@ -25,7 +25,7 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
-    redirect_to posts_path
+    redirect_to posts_path, notice: 'Новина була успішно видалена'
   end
 
   def index

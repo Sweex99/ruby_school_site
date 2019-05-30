@@ -7,8 +7,8 @@ CarrierWave.configure do |config|
     config.fog_provider= 'fog/aws'
     config.fog_credentials = {
         :provider              => 'AWS',
-        :aws_access_key_id     => 'AKIAJABHBLIUNZION3AA',
-        :aws_secret_access_key => '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',
+        :aws_access_key_id     => 'AKIAI5IGMA3FBP7GK72A',
+        :aws_secret_access_key => '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',
         :region                => 'eu-north-1'
     }
     config.fog_directory = 'rschool'

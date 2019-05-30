@@ -1,5 +1,5 @@
 class StudyController < ApplicationController
-  layout 'application'
+  layout 'sessionorregister'
 
   def index
     @done = '✓ '

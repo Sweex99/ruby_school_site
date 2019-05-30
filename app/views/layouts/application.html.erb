@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Зборянська ЗОШ</title>
+  <%= csrf_meta_tags %>
   <%= javascript_include_tag 'application', media: 'all', 'data-turbolinks-track' => 'reload'%>
   <%= stylesheet_link_tag 'bootswatch', media: 'all', 'data-turbolinks-track' => 'reload' %>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
@@ -10,31 +11,30 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <script src="https://cdn.ckeditor.com/4.11.2/standard-all/ckeditor.js"></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 </head>
 
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="z-index:999;">
   <a class="navbar-brand" href="<%= root_path %>">Сайт Школи</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarColor01">
-
-
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="<%= posts_path %>">Новини  <span class="badge badge-primary badge-pill">+10000</span><span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="<%= posts_path %>"><%= t('news') %>  <span class="badge badge-primary badge-pill">+10000</span><span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<%= pdfs_path %>">Файли</a>
+        <a class="nav-link" href="<%= pdfs_path %>"><%= t('file') %></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Фотоальбом</a>
+        <a class="nav-link" href="#" onclick="an()"><%= t('pg') %></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<%= collective_index_path %>">Колектив</a>
+        <a class="nav-link" href="<%= collective_index_path %>"><%= t('colective') %></a>
       </li>
     </ul>
     <div id="root">
@@ -51,48 +51,57 @@
           </li>
         <% else %>
           <li class="nav-item">
-            <%= link_to "Увійти", new_user_session_path, class: "nav-link", id: 'login', :@click => "showLoginModal=true" %>
+            <%= link_to t('login'), new_user_session_path, class: "nav-link", id: 'login', :@click => "showLoginModal=true" %>
 
           </li>
           <li class="nav-item">
-            <%= link_to "Реєстрація", new_user_registration_path, class: "nav-link" %>
+            <%= link_to t('reg'), new_user_registration_path, class: "nav-link" %>
           </li>
         <% end %>
       </ul>
     </div>
   </div>
 </nav>
+<div id='dv' class="d-none" style=""><%= notice %></div>
+
 <div class="row container-fluid">
   <div class="<%= user_signed_in? ? "col-lg-8 mr-4 ml-5 mt-4" : 'col-lg-11 mr-4 ml-5 mt-4' %>">
     <%= yield %>
   </div>
   <div class="<%= user_signed_in? ? "col-lg-3 ml-0 mt-4" : 'text-hide col-lg-0 ml-0 mt-0 d-none' %>">
+    <ul class="list-group" >
+      <li class="list-group-item d-flex justify-content-between align-items-center" >
+        <%= link_to_if (user_signed_in? and current_user.has_role? :admin), t("join_class"), show_user_path, class: 'pulse' %>
+      </li>
+    </ul><br>
     <ul class="list-group">
       <li class="list-group-item d-flex justify-content-between align-items-center">
-        <%= link_to 'Дистанційне навчання', remote_study_index_path %>
+        <%= link_to t("remote_study"), remote_study_index_path %>
         <span class="badge badge-primary badge-pill"></span>
       </li>
       <li class="list-group-item d-flex justify-content-between align-items-center">
-        <%= link_to 'Домашнє завдання', home_works_path %>
+        <%= link_to t('dz'), home_works_path %>
         <span class="badge badge-primary badge-pill"></span>
       </li>
       <li class="list-group-item d-flex justify-content-between align-items-center">
-        <%= link_to '"Мій клас"', my_class_path %>
+        <%= link_to t('my_class'), my_class_path %>
         <span class="badge badge-primary badge-pill"></span>
       </li>
       <li class="list-group-item d-flex justify-content-between align-items-center">
-        <%= link_to "Зауваження", student_report_index_path %>
+        <%= link_to t("report"), student_report_index_path %>
         <span class="badge badge-primary badge-pill">100000000</span>
       </li>
-      <li class="list-group-item d-flex justify-content-between align-items-center">
-        <%= link_to_if (user_signed_in? and current_user.has_role? :admin), 'Адмін панель', show_user_path %>
-        <span class="badge badge-primary badge-pill">1</span>
-      </li>
+
     </ul>
     <p></p>
+    <ul class="list-group" >
+      <li class="list-group-item d-flex justify-content-between align-items-center" style="border-color: #CC0000;">
+        <%= link_to_if (user_signed_in? and current_user.has_role? :admin), t("admin_panel"), show_user_path %>
+      </li>
+    </ul>
     </br>
     <div class="jumbotron">
-      <%= "Користувачів Онлайн: #{User.online_users.count}" %>
+      <%= t('user_online') + ": #{User.online_users.count}" %>
     </div>
   </div>
 

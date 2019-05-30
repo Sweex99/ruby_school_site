@@ -10776,5 +10776,46 @@ a.text-dark:hover, a.text-dark:focus {
   margin-left: auto;
   margin-right: auto;
 }
+#dv {
+  position: absolute;
+  width: 100%;
+  background-color: #18BC9C;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align: center;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 2s, opacity 2s linear;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.pulse {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:gray;
+  background: white;
+  border-radius: 50%;
+  animation: radial-pulse 1s infinite;
+}
+
+@keyframes radial-pulse {
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 0 40px rgba(0, 0, 0, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 0 60px rgba(0, 0, 0, 0);
+  }
+}
 
 

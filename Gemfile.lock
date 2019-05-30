@@ -276,6 +276,7 @@ DEPENDENCIES
   devise
   dotenv
   fog-aws
+  i18n
   jbuilder (~> 2.5)
   jquery-rails
   jquery-turbolinks

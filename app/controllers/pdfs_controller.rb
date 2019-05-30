@@ -1,5 +1,6 @@
 class PdfsController < ApplicationController
   before_action :set_pdf, only: [:show, :edit, :update, :destroy]
+ # protect_from_forgery prepend: true
 
   # GET /pdfs
   # GET /pdfs.json
@@ -45,6 +46,7 @@ class PdfsController < ApplicationController
     end
     @pdf.path = uploaded_io.original_filename
 
+
     redirect_to pdfs_path, notice: 'Файл успішно добавлено' if @pdf.save
   end
 
@@ -68,7 +70,8 @@ class PdfsController < ApplicationController
   def destroy
     @pdf = Pdf.find(params[:id])
     @pdf.destroy
-    redirect_to pdfs_path, notice: 'Файл успішно видалено'
+    flash[:notice] = 'Файл успішно видалено'
+    redirect_to pdfs_path
   end
 
   private

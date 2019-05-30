@@ -1,11 +1,7 @@
-<%= form_for @post do |f| %>
-  <div>
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </div>
+<%= form_for @report, url: posts_path do |f| %>
   <div>
     <%= f.label :body %>
-    <%= f.cktext_area :body %>
+    <%= f.text_area :body, class: 'ckeditor' %>
   </div>
   <div>
     <%= f.label :who %>

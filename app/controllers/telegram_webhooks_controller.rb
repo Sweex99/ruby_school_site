@@ -1,7 +1,5 @@
 class TelegramWebhooksController < Telegram::Bot::UpdatesController
   include Telegram::Bot::UpdatesController::MessageContext
-  # or just shortcut:
-  use_session!
 
   def start!(*)
     respond_with :message, text: '.content'
@@ -11,12 +9,16 @@ class TelegramWebhooksController < Telegram::Bot::UpdatesController
     respond_with :message, text: '.content'
   end
 
+  def ti!(*)
+    respond_with :message, text: "Вставте це #{chat['id']} на сайті в колонку 'Telegram ID'"
+  end
+
   def memo!(*args)
     if args.any?
       session[:memo] = args.join(' ')
-      respond_with :message, text: t('.notice')
+      respond_with :message, text: '.notice'
     else
-      respond_with :message, text: t('.prompt')
+      respond_with :message, text: '.prompt'
       save_context :memo!
     end
   end

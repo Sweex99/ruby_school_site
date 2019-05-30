@@ -1,6 +1,6 @@
 <h2 class="text-center">Профіль</h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {method: :put}) do |f| %>
   <%= devise_error_messages! %>
 
   <div class="field container">
@@ -12,47 +12,84 @@
     <% end %>
     <%= f.file_field :avatar %>
     <%= f.hidden_field :avatar_cache %>
-  </div>
-  <strong>Особисті Дані</strong>
- <hr>
-  <div class="field">
-    <%= f.label "Ім'я" %><br />
-    <%= f.text_field :name, class: 'form-control', value: current_user.name %>
+  </div><br>
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="tab" href="#main">Особисті Дані</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#tid">Telegram ID</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#changepass">Змінити Пароль</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#language">Мова</a>
+    </li>
+  </ul>
+  <div id="myTabContent" class="tab-content" style="height: 300px; border-top-color: green;">
+    <div class="tab-pane fade active show" id="main">
+      <br>
+      <div class="field">
+        <%= f.label "Ім'я" %><br/>
+        <%= f.text_field :name, class: 'form-control', value: current_user.name %>
+      </div>
+
+      <div class="field">
+        <%= f.label "Пошта" %><br/>
+        <%= f.email_field :email, class: 'form-control', value: current_user.email %>
+      </div>
+      <br><br>
+    </div>
+
+    <div class="tab-pane fade" id="tid">
+      <br>
+      <div class="field">
+        <%= f.label 'Telegram ID' %>
+        <%= f.text_field :telegram_id, class: 'form-control' %>
+      </div>
+      <br><br>
+    </div>
+
+    <div class="tab-pane fade" id="changepass">
+      <br><hr>
+      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+        <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+      <% end %>
+
+      <div class="field">
+        <%= f.label "Пароль" %> <i>(leave blank if you don't want to change it)</i><br/>
+        <%= f.password_field :password, autocomplete: "new-password", class: 'form-control' %>
+        <% if @minimum_password_length %>
+          <em><%= @minimum_password_length %> characters minimum</em>
+        <% end %>
+      </div>
+      <div class="field">
+        <%= f.label "Повторіть пароль" %><br/>
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'form-control' %>
+      </div>
+      <br><br>
+    </div>
+
+    <div class="tab-pane fade" id="language">
+      <br><hr>
+      <div class="field form-group">
+        <%= f.label 'Мова: ' %>
+        <%= f.select :language, I18n.available_locales, class: 'form-control'%>
+      </div>
+      <br><br>
+    </div>
+
   </div>
 
-  <div class="field">
-    <%= f.label "Пошта" %><br />
-    <%= f.email_field :email, class: 'form-control', value: current_user.email %>
-  </div>
-  <p><br></p>
-  <strong>Змінити Пароль</strong>
-  <hr>
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
+
+
+
+
+
 
   <div class="field">
-    <%= f.label "Пароль" %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "new-password", class: 'form-control' %>
-    <% if @minimum_password_length %>
-      <em><%= @minimum_password_length %> characters minimum</em>
-    <% end %>
-  </div>
-  <div class="field">
-    <%= f.label "Повторіть пароль" %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'form-control' %>
-  </div>
-  <p><br></p>
-  <strong>Telegram</strong>
-  <hr>
-  <div class="field">
-    <%= f.label 'Telegram ID' %>
-    <%= f.text_field :telegram_id, class: 'form-control'%>
-  </div>
-  <p><br></p>
-  <hr>
-  <div class="field">
-    <%= f.label "Поточний пароль" %> <i>(Якщо хочете змінити свої дані, введіть поточний пароль)</i><br />
+    <%= f.label "Поточний пароль" %> <i>(Якщо хочете змінити свої дані, введіть поточний пароль)</i><br/>
     <%= f.password_field :current_password, autocomplete: "current-password", class: 'form-control' %>
   </div>
 

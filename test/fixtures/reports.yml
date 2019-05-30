@@ -5,10 +5,12 @@ one:
   body: MyString
   when: 2019-02-02
   who: MyString
+  user_id: 1
 
 two:
   student_id: 1
   body: MyString
   when: 2019-02-02
   who: MyString
+  user_id: 2
 
