@@ -2,7 +2,6 @@ class User < ApplicationRecord
   has_many :reports
   has_one :user_role
   validates :name, :email, presence: true
-  validates :telegram_id, length: { is: 5 }, allow_blank: true
 
   mount_uploader :avatar, AvatarUploader
   rolify
