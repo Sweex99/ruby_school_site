@@ -30,7 +30,6 @@ Rails.application.configure do
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
-  config.action_mailer.default_url_options = { host: 'rschool.herokuapp.com' }
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
@@ -58,14 +57,20 @@ Rails.application.configure do
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
 
+
+  config.action_mailer.default_url_options = { host: 'rschool.herokuapp.com', host: 3000 }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.default :charset => "utf-8"
   config.action_mailer.smtp_settings = {
-      user_name: ENV['Taras_Matiiv'] || 'swex99@gmail.com',
-      password: ENV['numlock09'] || 'numlock09',
+      user_name: 'swex99@gmail.com',
+      password: 'numlock09',
       address: 'smtp.gmail.com',
       port: '587',
+      domain: "rschool.herokuapp.com",
       authentication: :plain,
-      enable_starttls_auto: true,
-      host: "rschool.herokuapp.com"
+      enable_starttls_auto: true
   }
   # Use a real queuing backend for Active Job (and separate queues per environment)
   # config.active_job.queue_adapter     = :resque
