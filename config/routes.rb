@@ -6,7 +6,9 @@ Rails.application.routes.draw do
       get 'show', to: 'remote_study#show', as: 'subject'
     end
 
-    resources :collective
+    resources :collective do
+
+    end
 
     resources :student_report
 
