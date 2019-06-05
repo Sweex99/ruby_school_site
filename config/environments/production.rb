@@ -57,7 +57,7 @@ Rails.application.configure do
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
 
-  config.telegram_updates_controller.session_store = :file_store,
+  config.telegram_updates_controller.session_store = :memory_store,
       Rails.root.join('tmp', 'session_store')
 
   config.action_mailer.default_url_options = { host: 'rschool.herokuapp.com', protocol: 'https' }
