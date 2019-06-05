@@ -15,6 +15,7 @@
 //= require jquery.turbolinks
 //= require rails-ujs
 //= require twitter/bootstrap
+//= require push_notification
 //= require admin_panel
 //= require_tree .
 
