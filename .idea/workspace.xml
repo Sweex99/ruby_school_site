@@ -4,9 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/app/views/admin_panel/new_teacher_student.html.erb" line="5" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fdde501e-f3ad-4ce8-ba5f-49bfa5ae2d29" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
-    </list>
+    <list default="true" id="fdde501e-f3ad-4ce8-ba5f-49bfa5ae2d29" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
     <ignored path="$PROJECT_DIR$/public/system/" />
@@ -118,7 +116,7 @@
         <entry file="file://$PROJECT_DIR$/Procfile">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
-              <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+              <caret line="1" column="36" selection-start-line="1" selection-start-column="36" selection-end-line="1" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -785,12 +783,12 @@
       <workItem from="1559639505423" duration="1622000" />
       <workItem from="1559648314707" duration="771000" />
       <workItem from="1559674013497" duration="9238000" />
-      <workItem from="1559742899697" duration="12420000" />
+      <workItem from="1559742899697" duration="12688000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1340480000" />
+    <option name="totallyTimeSpent" value="1340748000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -803,7 +801,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49917898" visible="true" weight="0.21016692" />
       <window_info id="Structure" order="1" sideWeight="0.501292" side_tool="true" weight="0.16944024" />
@@ -1202,7 +1199,7 @@
     <entry file="file://$PROJECT_DIR$/Procfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+          <caret line="1" column="36" selection-start-line="1" selection-start-column="36" selection-end-line="1" selection-end-column="36" />
         </state>
       </provider>
     </entry>
