@@ -4,9 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/app/views/admin_panel/new_teacher_student.html.erb" line="5" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fdde501e-f3ad-4ce8-ba5f-49bfa5ae2d29" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="fdde501e-f3ad-4ce8-ba5f-49bfa5ae2d29" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
     <ignored path="$PROJECT_DIR$/public/system/" />
@@ -56,15 +54,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/student_report_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="3" selection-start-line="32" selection-start-column="3" selection-end-line="32" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/study_controller.rb">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
@@ -108,20 +97,24 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="29" lean-forward="true" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+            <state relative-caret-position="270">
+              <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="930">
-              <caret line="65" selection-start-line="65" selection-end-line="65" />
+            <state relative-caret-position="300">
+              <caret line="41" column="32" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
+              <folding>
+                <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#t#1;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -276,6 +269,19 @@
               <item name="ruby_school_site" type="b2602c69:ProjectViewProjectNode" />
               <item name="ruby_school_site" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ruby_school_site" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ruby_school_site" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="javascripts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ruby_school_site" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ruby_school_site" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -332,16 +338,16 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="H:\Project\ruby_school_site\app\views\layouts" />
+      <recent name="H:\Project\ruby_school_site\app\views\student_report" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/views/mailers/alert_home_tasks" />
       <recent name="H:\Project\ruby_school_site\public" />
       <recent name="H:\Project\ruby_school_site\app\assets\images\avatar" />
       <recent name="H:\Project\ruby_school_site\app\assets\images" />
       <recent name="D:\Project\ruby_school_site\app\data\timetable" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="H:\Project\ruby_school_site\app\views\layouts" />
-      <recent name="H:\Project\ruby_school_site\app\views\student_report" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -819,12 +825,12 @@
       <workItem from="1559571434870" duration="3293000" />
       <workItem from="1559639505423" duration="1622000" />
       <workItem from="1559648314707" duration="771000" />
-      <workItem from="1559674013497" duration="4588000" />
+      <workItem from="1559674013497" duration="5355000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1323410000" />
+    <option name="totallyTimeSpent" value="1324177000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -837,9 +843,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49917898" visible="true" weight="0.20637329" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49917898" visible="true" weight="0.20637329" />
       <window_info id="Structure" order="1" sideWeight="0.501292" side_tool="true" weight="0.16944024" />
       <window_info id="Favorites" order="2" sideWeight="0.500821" side_tool="true" weight="0.16944024" />
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.32840723" />
@@ -854,7 +859,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" sideWeight="0.49848714" weight="0.32718894" />
       <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.4969743" weight="0.32565284" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5060514" side_tool="true" weight="0.3502455" />
-      <window_info anchor="bottom" x="22" y="111" width="1322" height="505" id="Terminal" order="12" sideWeight="0.49394855" visible="true" weight="0.38907284" />
+      <window_info active="true" anchor="bottom" x="22" y="111" width="1322" height="505" id="Terminal" order="12" sideWeight="0.49394855" visible="true" weight="0.38907284" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -935,16 +940,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Travis #4" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/posts/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="42" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="42" />
-          <folding>
-            <element signature="e#95#123#0#ruby" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/workers/remote_task_worker.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1236,17 +1231,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="29" lean-forward="true" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+        <state relative-caret-position="300">
+          <caret line="41" column="32" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
+          <folding>
+            <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#t#1;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/push_notification.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="930">
-          <caret line="65" selection-start-line="65" selection-end-line="65" />
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
         </state>
       </provider>
     </entry>
