@@ -1,5 +1,8 @@
 class TelegramWebhooksController < Telegram::Bot::UpdatesController
   include Telegram::Bot::UpdatesController::MessageContext
+  Telegram::Bot::UpdatesController::Session
+
+  use_session!
 
   def start!(*)
     respond_with :message, text: '.content'
