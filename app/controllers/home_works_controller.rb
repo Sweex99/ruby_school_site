@@ -62,13 +62,13 @@ class HomeWorksController < ApplicationController
     return date.strftime('%Y-%m-%d')
   end
 
+  def get_home_task(day, type_day)
+    HomeTask.where(class_room: current_user.class_room, :date_task => date_of_next(type_day), :day_by_week => day).order(created_at: :desc)
+  end
 
   def home_task_params
     params.require(:home_task).permit(:subject, :description, :date_task)
   end
 
-  def get_home_task(day, type_day)
-   HomeTask.where(class_room: current_user.class_room, :date_task => date_of_next(type_day), :day_by_week => day).order(created_at: :desc)
-  end
 
 end

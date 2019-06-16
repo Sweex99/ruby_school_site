@@ -1,0 +1,13 @@
+<table>
+  <tbody>
+    <% @joins.each do |join| %>
+    <div class="card border-secondary">
+      <div class="card-header"><%= get_users_name_for_index_action(join.user_id) %> хоче приєднатись до <%= join.class_room %>-го класу
+        <%= button_to 'Відхилити', join_path(join.id), method: 'delete', class: "btn btn-warning float-sm-right" %>
+        <%= link_to 'Підтвердити', add_student_path(id: join.id), class: "btn btn-success float-sm-right join_button", id: join.id, remote: true %>
+      </div>
+    </div>
+    <br>
+    <% end %>
+  </tbody>
+</table>

@@ -17,6 +17,20 @@
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="z-index:999;">
+  <div id="myModal" class="modal" >
+    <div class="modal-content border-success card" style="max-width: 400px;">
+      <div class="close text-right material-icons">cancel</div>
+      <p style="max-width: 400px;">
+        <div class="card text-white bg-danger mb-3">Заповнюйте форму тільки, якщо ви ЯВЛЯЄТЕСЬ учнем школи</div>
+        <%= form_for Join.new do |f| %>
+          <%= f.label 'Ваш Клас' %>
+          <%= f.text_field :class_room, class: 'form-control'%><br>
+
+          <%= f.submit_tag "Submit", class: "btn btn-primary" %>
+        <% end %>
+      </p>
+    </div>
+  </div>
   <a class="navbar-brand" href="<%= root_path %>">Сайт Школи</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -37,8 +51,8 @@
         <a class="nav-link" href="<%= collective_index_path %>"><%= t('colective') %></a>
       </li>
     </ul>
-    <div id="root">
-      <ul class="navbar-nav pull-xs-right">
+    <div id="root background">
+      <ul class="navbar-nav pull-xs-right background">
         <% if user_signed_in? %>
           <li class="nav-item">
             <%= link_to image_tag(current_user.avatar.url, class: 'bl', style: 'background-color: #18BC9C;'), edit_user_registration_path %>
@@ -64,16 +78,18 @@
 </nav>
 <div id='dv' class="d-none" style=""><%= notice %></div>
 
-<div class="row container-fluid">
-  <div class="<%= user_signed_in? ? "col-lg-8 mr-4 ml-5 mt-4" : 'col-lg-11 mr-4 ml-5 mt-4' %>">
+<div class="row container-fluid background">
+  <div class="<%= user_signed_in? ? "col-lg-8 mr-4 ml-5 mt-4 " : 'col-lg-11 mr-4 ml-5 mt-4' %>">
     <%= yield %>
   </div>
   <div class="<%= user_signed_in? ? "col-lg-3 ml-0 mt-4" : 'text-hide col-lg-0 ml-0 mt-0 d-none' %>">
+    <% if user_signed_in? and check_student %>
     <ul class="list-group" >
       <li class="list-group-item d-flex justify-content-between align-items-center" >
-        <%= link_to_if (user_signed_in? and current_user.has_role? :admin), t("join_class"), show_user_path, class: 'pulse', style: "color: green;" %>
+          <%= link_to t("join_class"), '#', class: 'pulse', style: "color: green;", id: "myBtn" %>
       </li>
     </ul><br>
+    <% end %>
     <ul class="list-group">
       <li class="list-group-item d-flex justify-content-between align-items-center">
         <%= link_to t("remote_study"), remote_study_index_path %>
@@ -84,6 +100,10 @@
         <span class="badge badge-primary badge-pill"></span>
       </li>
       <li class="list-group-item d-flex justify-content-between align-items-center">
+        <%= link_to "Розклад", schedules_path %>
+        <span class="badge badge-primary badge-pill"></span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
         <%= link_to t('my_class'), my_class_path %>
         <span class="badge badge-primary badge-pill"></span>
       </li>
@@ -91,12 +111,16 @@
         <%= link_to t("report"), student_report_index_path %>
         <span class="badge badge-primary badge-pill">100000000</span>
       </li>
-
     </ul>
+
     <p></p>
-    <ul class="list-group" >
-      <li class="list-group-item d-flex justify-content-between align-items-center" style="border-color: #CC0000;">
+    <ul class="list-group">
+      <li class="list-group-item d-flex justify-content-between align-items-center" style="border-color: #CC0000;" >
         <%= link_to_if (user_signed_in? and current_user.has_role? :admin), t("admin_panel"), show_user_path %>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center" style="border-color: #CC0000;" >
+        <%= link_to_if (user_signed_in? and current_user.has_role? :admin), 'Нові Учні', joins_path %>
+        <span class="badge badge-primary badge-pill"><%= number_willing_to_join %></span>
       </li>
     </ul>
     </br>
@@ -105,8 +129,39 @@
     </div>
   </div>
 
+</div><br>
+<footer class="page-footer mt-5" style="height: 50px;">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="z-index:999;width: 100%">
+    <div style="color: white" class="center-block">Copyright © <%= Date.today.year %></div>
+  </nav>
+</footer>
+<script>
+    var modal = document.getElementById("myModal");
 
-</div>
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on the button, open the modal
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+</script>
 
 </body>
 </html>

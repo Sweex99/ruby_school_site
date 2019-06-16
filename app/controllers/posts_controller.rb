@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
   def create
-    @post = Post.new(post_params)
+    @post = Post.create(post_params)
     redirect_to posts_path, notice: 'Новина була успішно створена' if @post.save
   end
 

@@ -69,6 +69,8 @@ class PdfsController < ApplicationController
   # DELETE /pdfs/1.json
   def destroy
     @pdf = Pdf.find(params[:id])
+    path_to_file = Rails.root.join('public', 'uploaded_pdf', "#{@pdf.path}")
+    File.delete(path_to_file) if File.exist?(path_to_file)
     @pdf.destroy
     flash[:notice] = 'Файл успішно видалено'
     redirect_to pdfs_path
