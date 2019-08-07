@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# good
 class TelegramWebhooksController < Telegram::Bot::UpdatesController
   include Telegram::Bot::UpdatesController::MessageContext
   include Telegram::Bot::UpdatesController::Session
@@ -38,9 +41,8 @@ class TelegramWebhooksController < Telegram::Bot::UpdatesController
     else
       save_context :keyboard!
       respond_with :message, text: t('.prompt'), reply_markup: {
-          keyboard: [t('.buttons')],
-          resize_keyboard: true,
-
+          keyboard: [ t( '.buttons' ) ],
+          resize_keyboard: true
       }
     end
   end
@@ -49,8 +51,8 @@ class TelegramWebhooksController < Telegram::Bot::UpdatesController
     respond_with :message, text: t('.prompt'), reply_markup: {
         inline_keyboard: [
             [
-                {text: t('.alert'), callback_data: 'alert'},
-                {text: t('.no_alert'), callback_data: 'no_alert'},
+                { text: t('.alert'), callback_data: 'alert' },
+                { text: t('.no_alert'), callback_data: 'no_alert' },
             ],
             [{text: t('.repo'), url: 'https://github.com/telegram-bot-rb/telegram-bot'}],
         ],

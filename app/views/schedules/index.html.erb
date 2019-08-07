@@ -1,14 +1,16 @@
-<table class="table table-hover">
-  <thead>
-  <tr>
-    <th scope="col">Type</th>
-    <th scope="col">Column heading</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <th scope="col">Type</th>
-    <th scope="col">Column heading</th>
-  </tr>
-  </tbody>
-</table>
+<div class="card-body">
+  <div class="row container-fluid">
+    <div class="col-lg-6">
+      <table class="table table-hover" align="left">
+        <tr class="table-light">
+          <td colspan="4" class="table-center">Понеділок <%= date_of_next('Monday') %></td>
+        </tr>
+      </table>
+      <hr>
+      <br>
+    </div>
+  </div>
+  <div class="card-footer"><%#= link_to show.who, root_path, class: 'badge badge-pill badge-success' %>
+    <form class="float-right"><%##= show.updated_at %></form>
+  </div>
+</div>

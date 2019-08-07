@@ -1,0 +1,13 @@
+I"I(function() {
+  $(function() {
+    return $('.join_button').on('ajax:success', function(e, data, status, xhr) {
+      var id, url_add_admin;
+      id = ($(e.target)).attr('id');
+      console.log("sss");
+      url_add_admin = "/joins/add_student/";
+      return $("#" + id).attr("class", "d-none");
+    });
+  });
+
+}).call(this);
+:ET

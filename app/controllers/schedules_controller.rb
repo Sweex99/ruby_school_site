@@ -1,18 +1,20 @@
+# frozen_string_literal: true
+
+# good
 class SchedulesController < ApplicationController
-  before_action :set_schedule, only: [:show, :edit, :update, :destroy]
+  before_action :set_schedule, only: %i[show edit update destroy]
   before_action :authenticate_user!
-  before_action :mast_be_admin, only: [:edit, :destroy, :update, :create]
+  before_action :mast_be_admin, only: %i[edit destroy update create]
 
   # GET /schedules
   # GET /schedules.json
   def index
-    @schedules = Schedule.where(class_room: current_user.class_room)
+    @schedules = Schedule.all
   end
 
   # GET /schedules/1
   # GET /schedules/1.json
-  def show
-  end
+  def show; end
 
   # GET /schedules/new
   def new
@@ -20,8 +22,7 @@ class SchedulesController < ApplicationController
   end
 
   # GET /schedules/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /schedules
   # POST /schedules.json
@@ -64,6 +65,7 @@ class SchedulesController < ApplicationController
   end
 
   private
+
     # Use callbacks to share common setup or constraints between actions.
     def set_schedule
       @schedule = Schedule.find(params[:id])

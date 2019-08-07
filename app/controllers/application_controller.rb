@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
+# good
 class ApplicationController < ActionController::Base
- #r protect_from_forgery with: :exception
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :set_locale
 
@@ -23,9 +25,7 @@ class ApplicationController < ActionController::Base
   end
 
   def must_be_admin
-    unless (current_user && (current_user.has_role? :admin))
-      redirect_to root_path, notice: "Some message"
-    end
+    redirect_to root_path, notice: 'Some message' unless current_user && (current_user.has_role? :admin)
   end
 
   def resource_name
@@ -47,5 +47,4 @@ class ApplicationController < ActionController::Base
     User
   end
   helper_method :resource_class
-
 end

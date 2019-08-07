@@ -1,5 +1,7 @@
-class PostsController < ApplicationController
+# frozen_string_literal: true
 
+# good
+class PostsController < ApplicationController
   def create
     @post = Post.create(post_params)
     redirect_to posts_path, notice: 'Новина була успішно створена' if @post.save

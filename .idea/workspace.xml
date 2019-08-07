@@ -5,37 +5,59 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fdde501e-f3ad-4ce8-ba5f-49bfa5ae2d29" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Study.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Study.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/admin_panel.js.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/admin_panel.js.coffee" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/bootswatch.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/bootswatch.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/home_works_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/home_works_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/pdfs_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/pdfs_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/posts_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/posts_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/schedules_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/schedules_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/schedule.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/schedule.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/posts/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/posts/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/tasks/telegram-bot.rake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/schedules/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/schedules/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/.sprockets-manifest-665ad4399179dc283199a41e3eadddb0.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/.sprockets-manifest-665ad4399179dc283199a41e3eadddb0.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploaded_pdf/#&lt;ActionDispatch::Http::UploadedFile:0x00007f994cf0f9f0&gt;" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploaded_pdf/My_resume(Taras).pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploaded_pdf/NewMatiivCursova_prefunally_version.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploaded_pdf/NewMatiivCursova_prefunally_version.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploaded_pdf/Object-oriented programming (OOP).docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploaded_pdf/demo.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploaded_pdf/raschetssredney.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploaded_pdf/sample.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploaded_pdf/sample1231231123 (1).pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploaded_pdf/sample1231231123.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploaded_pdf/sample123123123123123.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploaded_pdf/ККР (13 Варіант).docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploaded_pdf/ККР вступ до спеціальності.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploaded_pdf/Крок №1. _ЄДКІ_.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploaded_pdf/Лекція 9 - Основи Active Record.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploaded_pdf/Шевчук_С_В_Українська_мова_за_професійним.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/cache/actioncable-5.1.6.1.gem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/cache/actionmailer-5.1.6.1.gem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/cache/actionpack-5.1.6.1.gem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/cache/actionview-5.1.6.1.gem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/cache/activejob-5.1.6.1.gem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/cache/activemodel-5.1.6.1.gem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/cache/activerecord-5.1.6.1.gem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/cache/activesupport-5.1.6.1.gem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/cache/addressable-2.5.2.gem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/cache/autoprefixer-rails-9.4.4.gem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/cache/bcrypt-3.1.12-x86-mingw32.gem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/cache/bcrypt-3.1.12.gem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/cache/bindex-0.5.0.gem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/cache/childprocess-0.9.0.gem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/cache/devise-4.5.0.gem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/cache/dotenv-2.6.0.gem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/cache/et-orbi-1.2.0.gem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/cache/excon-0.62.0.gem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/cache/ffi-1.10.0-x86-mingw32.gem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/cache/ffi-1.10.0.gem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/cache/fog-aws-3.4.0.gem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/cache/fugit-1.2.0.gem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/cache/jbuilder-2.8.0.gem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/cache/jquery-rails-4.3.3.gem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/cache/nio4r-2.3.1.gem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/cache/nokogiri-1.10.2-x86-mingw32.gem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/cache/nokogiri-1.10.2.gem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/cache/public_suffix-3.0.3.gem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/cache/puma-3.12.0.gem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/cache/rack-2.0.6.gem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/cache/rails-5.1.6.1.gem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/cache/railties-5.1.6.1.gem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/cache/redis-4.1.0.gem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/cache/responders-2.4.0.gem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/cache/rubyzip-1.2.2.gem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/cache/sass-3.7.3.gem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/cache/selenium-webdriver-3.141.0.gem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/cache/telegram-bot-0.14.1.gem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/cache/tzinfo-data-1.2018.9.gem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/cache/websocket-extensions-0.1.3.gem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/cache/will_paginate-3.1.6.gem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/cache/will_paginate-bootstrap-1.0.1.gem" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -85,11 +107,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/database.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="80" column="42" selection-start-line="80" selection-start-column="42" selection-end-line="80" selection-end-column="42" />
+            <state relative-caret-position="795">
+              <caret line="53" column="26" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -97,26 +119,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/bootswatch.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="10859" selection-start-line="10859" selection-end-line="10859" />
+            <state relative-caret-position="162945">
+              <caret line="10863" column="41" selection-start-line="10863" selection-start-column="41" selection-end-line="10863" selection-end-column="41" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/home_works_controller.rb">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="56" selection-start-line="56" selection-end-line="56" />
+            <state relative-caret-position="1215">
+              <caret line="81" column="19" selection-start-line="81" selection-start-column="19" selection-end-line="81" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/schedules/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+            <state relative-caret-position="75">
+              <caret line="5" column="91" selection-start-line="5" selection-start-column="91" selection-end-line="5" selection-end-column="91" />
             </state>
           </provider>
         </entry>
@@ -124,7 +146,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/telegram_webhooks_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
+            <state relative-caret-position="255">
               <caret line="17" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
@@ -133,8 +155,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/home_works/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1140">
-              <caret line="76" column="8" selection-end-line="77" selection-end-column="6" />
+            <state relative-caret-position="60">
+              <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="76" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -159,14 +181,9 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/joins/index.html.erb">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/joins_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="165">
+              <caret line="11" selection-start-line="11" selection-end-line="13" />
             </state>
           </provider>
         </entry>
@@ -273,11 +290,11 @@
         <option value="$PROJECT_DIR$/app/views/posts/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/posts_controller.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20190616101944_create_schedules.rb" />
-        <option value="$PROJECT_DIR$/app/views/schedules/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/home_works_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/schedules_controller.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/bootswatch.scss" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/schedules/index.html.erb" />
       </list>
     </option>
   </component>
@@ -303,7 +320,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
@@ -321,19 +337,27 @@
               <item name="ruby_school_site" type="b2602c69:ProjectViewProjectNode" />
               <item name="ruby_school_site" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ruby_school_site" type="b2602c69:ProjectViewProjectNode" />
               <item name="ruby_school_site" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="home_works" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ruby_school_site" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ruby_school_site" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="schedules" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -342,7 +366,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/assets/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs.jest.jest_package" value="" />
     <property name="nodejs.mocha.mocha_node_package_dir" value="" />
     <property name="nodejs.protractor.protractor_package" value="" />
@@ -859,12 +883,19 @@
       <workItem from="1560667494868" duration="1339000" />
       <workItem from="1560676590609" duration="7543000" />
       <workItem from="1560692087428" duration="7475000" />
-      <workItem from="1560707671928" duration="1413000" />
+      <workItem from="1560707671928" duration="3016000" />
+      <workItem from="1560766096139" duration="3672000" />
+      <workItem from="1560795985458" duration="2705000" />
+      <workItem from="1560948869232" duration="1625000" />
+      <workItem from="1560960326635" duration="78000" />
+      <workItem from="1561369176677" duration="7750000" />
+      <workItem from="1562102771492" duration="801000" />
+      <workItem from="1562563668136" duration="54000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1434955000" />
+    <option name="totallyTimeSpent" value="1453243000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -876,10 +907,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1366" height="741" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="27" width="1280" height="997" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49917898" visible="true" weight="0.25948405" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49917898" visible="true" weight="0.2849026" />
       <window_info id="Structure" order="1" sideWeight="0.501292" side_tool="true" weight="0.16944024" />
       <window_info id="Favorites" order="2" sideWeight="0.500821" side_tool="true" weight="0.16944024" />
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.32840723" />
@@ -894,7 +924,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" sideWeight="0.49848714" weight="0.32718894" />
       <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.4969743" weight="0.32565284" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5060698" side_tool="true" weight="0.29304636" />
-      <window_info anchor="bottom" x="22" y="111" width="1322" height="505" id="Terminal" order="12" sideWeight="0.4939302" visible="true" weight="0.33112583" />
+      <window_info active="true" anchor="bottom" x="22" y="111" width="1322" height="505" id="Terminal" order="12" sideWeight="0.4939302" visible="true" weight="0.33139536" />
       <window_info anchor="bottom" id="Messages" order="13" weight="0.3294702" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -980,16 +1010,6 @@
     <SUITE FILE_PATH="coverage/ruby_school_site@Development__Study.rcov" NAME="Development: Study Coverage Results" MODIFIED="1560325412619" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Study" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/remote_study_controller.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Procfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="38" selection-start-column="38" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/controllers/join_to_school_controller_test.rb" />
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/join_to_school.scss" />
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
@@ -1184,17 +1204,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/schedules/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.scss">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/joins_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+        <state relative-caret-position="120">
+          <caret line="43" column="69" selection-start-line="43" selection-start-column="69" selection-end-line="43" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="53" column="26" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/bootswatch.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162945">
+          <caret line="10863" column="41" selection-start-line="10863" selection-start-column="41" selection-end-line="10863" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1215">
+          <caret line="81" column="19" selection-start-line="81" selection-start-column="19" selection-end-line="81" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/telegram_webhooks_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home_works/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1140">
-          <caret line="76" column="8" selection-end-line="77" selection-end-column="6" />
+        <state relative-caret-position="60">
+          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="76" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -1213,33 +1264,16 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/joins/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/joins_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/telegram_webhooks_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/schedules/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/bootswatch.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="10859" selection-start-line="10859" selection-end-line="10859" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="80" column="42" selection-start-line="80" selection-start-column="42" selection-end-line="80" selection-end-column="42" />
+          <caret line="5" column="91" selection-start-line="5" selection-start-column="91" selection-end-line="5" selection-end-column="91" />
         </state>
       </provider>
     </entry>

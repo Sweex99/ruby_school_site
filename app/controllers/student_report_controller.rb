@@ -1,34 +1,31 @@
+# frozen_string_literal: true
+
+# godd
 class StudentReportController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @reports = Report.where(:student_id => current_user.id)
+    @reports = Report.where(student_id: current_user.id)
   end
 
-  def show
+  def show; end
 
-  end
-
-  def edit
-
-  end
+  def edit; end
 
   def destroy
-    if Report.destroy(params[:id])
-      redirect_to root_path, notice: 'Yeeeeh'
-    end
+    redirect_to root_path, notice: 'Yeeeeh' if Report.destroy(params[:id])
   end
 
-  def update
-
-  end
-
+  def update; end
 
   def create
     data = (params[:start_date]['when(3i)'] + '-' +
         params[:start_date]['when(2i)'] + '-' +
         params[:start_date]['when(1i)']).to_s
-    @report = Report.new(:student_id => params[:student_id], :body => params[:report][:body], :when => data, :who => params[:report][:who])
+    @report = Report.new(student_id: params[:student_id],
+                         body: params[:report][:body],
+                         when: data,
+                         who: params[:report][:who])
 
     ReportMailer.reports_mailer.deliver
 
@@ -38,5 +35,4 @@ class StudentReportController < ApplicationController
   def new
     @report = Report.new
   end
-
 end

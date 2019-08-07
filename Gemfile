@@ -5,7 +5,12 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git  "
 end
 
+gem 'rspec-rails'
+
 gem 'i18n'
+gem 'rubycritic'
+
+gem 'letter_opener'
 
 gem 'telegram-bot'
 

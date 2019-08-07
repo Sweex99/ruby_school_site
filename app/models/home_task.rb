@@ -1,4 +1,6 @@
-class HomeTask < ApplicationRecord
+# frozen_string_literal: true
 
-  scope :alert, -> { where("date_task >= :now ", now: Time.now).where(class_room: 5) }
+# good
+class HomeTask < ApplicationRecord
+  scope :alert, -> { where('date_task >= :now ', now: Time.now).where(class_room: 5) }
 end

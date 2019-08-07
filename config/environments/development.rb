@@ -6,12 +6,13 @@ Rails.application.configure do
   # since you don't have to restart the web server when you make code changes.
   config.telegram_updates_controller.session_store = :memory_store
 
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.delivery_method = :letter_opener
   config.cache_classes = false
 
   config.require_master_key = true
   config.read_encrypted_secrets = (Rails.env == 'development')
   config.action_mailer.raise_delivery_errors = false
-  config.action_mailer.delivery_method = :sendmail
 
   # Do not eager load code on boot.
   config.eager_load = false
@@ -20,7 +21,6 @@ Rails.application.configure do
   config.consider_all_requests_local = true
   config.action_mailer.perform_deliveries = true
 
-  config.action_mailer.delivery_method = :smtp
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
   config.action_mailer.smtp_settings = {
