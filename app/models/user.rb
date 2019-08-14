@@ -1,5 +1,11 @@
+# frozen_string_literal: true
+
+# good
 class User < ApplicationRecord
-  before_create :set_default_avatar
+  has_many :schedules
+  has_many :reports
+  has_one :user_role
+  validates :name, :email, presence: true
 
   mount_uploader :avatar, AvatarUploader
   rolify
@@ -9,9 +15,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :confirmable, :trackable
 
-  #attr_accessor :name, :email, :password, :password_confirmation, :remember_me
-
-  scope :online_users, -> { self.pluck(:id).delete_if { |user_id| !User.find(user_id).online? } }
+  scope :online_users, -> { pluck(:id).delete_if { |user_id| !User.find(user_id).online? } }
 
   def online?
     if current_sign_in_at.present?
@@ -19,14 +23,5 @@ class User < ApplicationRecord
     else
       false
     end
-  end
-
-  def set_default_avatar
-    nil ? 'default_avatar' : ''
-  end
-
-  protected
-  def confirmation_required?
-    false
   end
 end

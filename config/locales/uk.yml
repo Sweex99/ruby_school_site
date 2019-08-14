@@ -4,3 +4,21 @@ uk:
       - :day
       - :month
       - :year
+  hello: "Привіт світ"
+  news: "Новини"
+  file: "Файли"
+  pg: "Фотоальбом"
+  colective: "Колектив"
+  login: "Увійти"
+  reg: "Зареєструвати"
+  remote_study: 'Дистанційне навчання'
+  dz: 'Домашнє завдання'
+  my_class: 'Мій клас'
+  report: "Зауваження"
+  admin_panel: "Адмін панель"
+  user_online: "Користувачів Онлайн"
+  join_class: 'Вступити в клас'
+  post:
+    button_create_post: 'Добавити новину'
+  pdf:
+    button_create_pdf: 'Добавити файл'

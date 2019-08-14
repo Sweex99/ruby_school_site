@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
+# good
 class UserRole < ApplicationRecord
-  belongs_to :user
 end

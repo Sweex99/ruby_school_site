@@ -1,6 +1,8 @@
-<p id="notice" class="text-success"><%= notice %></p>
-
-<%= link_to 'New Pdf', new_pdf_path %>
+<%#= debug params %>
+<% if user_signed_in? && (current_user.has_role? :admin) %>
+  <%= link_to t('pdf.button_create_pdf'), new_pdf_path, class: 'btn btn-success' %><br>
+<% end %>
+<br>
 <% @pdfs.each do |pdf| %>
   <div class="card border-secondary">
     <div class="card-header"><%= pdf.title %> (<%= pdf.updated_at.strftime('%m-%d-%Y') %>)
@@ -9,15 +11,16 @@
       <% end %>
     </div>
     <div class="card-body">
-        <%= image_tag("#{@file[pdf.path.split('.').last]}", :alt => "#{pdf.path.split('.').last}", :style => 'float: left; margin : 13px') %>
+      <%= image_tag("#{@file[pdf.path.split('.').last]}", :alt => "#{pdf.path.split('.').last}", :style => 'float: left; margin : 13px') %>
       <p class="card-text"><%= pdf.description %><br>
     </div>
     <div class="card-footer">
-    <% if pdf.path.split('.').last == 'pdf' %>
-      <%= link_to 'Відкрити', pdf_path(pdf.id), method: :get, class: 'badge badge-pill badge-success' %>
-    <% end %>
-      <%= link_to raw("Скачати &#128190;"), download_pdf_path(pdf.id), method: :get, class: 'badge badge-pill badge-success'%>
-      <form class="float-right"><%= pdf.author %></form></div>
+      <% if pdf.path.split('.').last == 'pdf' %>
+        <%= link_to 'Відкрити', pdf_path(pdf.id), method: :get, class: 'badge badge-pill badge-success' %>
+      <% end %>
+      <%= link_to raw("Скачати &#128190;"), download_pdf_path(pdf.id), method: :get, class: 'badge badge-pill badge-success' %>
+      <form class="float-right"><%= pdf.author %></form>
+    </div>
   </div>
   <br>
 <% end %>

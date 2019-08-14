@@ -1,0 +1,20 @@
+I"r(function() {
+  $(function() {
+    return $('.join_button').on('ajax:success', function(e, data, status, xhr) {
+      var id, url_add_admin;
+      id = ($(e.target)).attr('id');
+      console.log("sss");
+      url_add_admin = "/joins/add_student/";
+      if (URL === ("" + (url_add_admin + id))) {
+        $("#" + idd).text("Зробити адміном");
+        $("#" + idd).attr("href", url_add_admin + id);
+      }
+      if (URL === ("" + (url_add_admin + id))) {
+        $("#" + idd).text("Забрати права");
+        return $("#" + idd).attr("href", url_add_admin + id);
+      }
+    });
+  });
+
+}).call(this);
+:ET

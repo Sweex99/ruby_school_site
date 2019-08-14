@@ -1,0 +1,11 @@
+I"â(function() {
+  $(function() {
+    return $('.join_button').on('ajax:success', function(e, data, status, xhr) {
+      var id;
+      id = ($(e.target)).attr('id');
+      return console.log("sss");
+    });
+  });
+
+}).call(this);
+:ET

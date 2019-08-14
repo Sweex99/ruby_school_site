@@ -1,5 +1,5 @@
 class PdfsController < ApplicationController
-  before_action :set_pdf, only: [:show, :edit, :update, :destroy]
+  before_action :set_pdf, only: %i[show edit update destroy]
 
   # GET /pdfs
   # GET /pdfs.json
@@ -14,13 +14,17 @@ class PdfsController < ApplicationController
   def show
     @pdf = Pdf.find(params[:id])
     pdf_filename = File.join(Rails.root, "public/uploaded_pdf/#{@pdf.path}")
-    send_file(pdf_filename, filename: @pdf.path.to_s, type: 'application/pdf', x_sendfile: true, disposition: 'inline')
+    send_file(pdf_filename, filename: @pdf.path.to_s, type: 'application/pdf',
+                            x_sendfile: true,
+                            disposition: 'inline')
   end
 
   def download
     @pdf = Pdf.find(params[:id])
     pdf_filename = File.join(Rails.root, "public/uploaded_pdf/#{@pdf.path}")
-    send_file(pdf_filename, filename: @pdf.path.to_s, type: 'application/pdf', x_sendfile: true)
+    send_file(pdf_filename, filename: @pdf.path.to_s,
+                            type: 'application/pdf',
+                            x_sendfile: true)
   end
 
   # GET /pdfs/new
@@ -40,7 +44,9 @@ class PdfsController < ApplicationController
 
     # save file in public folder
     uploaded_io = params[:pdf][:path]
-    File.open(Rails.root.join('public', 'uploaded_pdf', uploaded_io.original_filename), 'wb') do |file|
+    File.open(Rails.root.join('public',
+                              'uploaded_pdf',
+                              uploaded_io.original_filename), 'wb') do |file|
       file.write(uploaded_io.read)
     end
     @pdf.path = uploaded_io.original_filename
@@ -67,8 +73,11 @@ class PdfsController < ApplicationController
   # DELETE /pdfs/1.json
   def destroy
     @pdf = Pdf.find(params[:id])
+    path_to_file = Rails.root.join('public', 'uploaded_pdf', @pdf.path.to_s)
+    File.delete(path_to_file) if File.exist?(path_to_file)
     @pdf.destroy
-    redirect_to pdfs_path, notice: 'Файл успішно видалено'
+    flash[:notice] = 'Файл успішно видалено'
+    redirect_to pdfs_path
   end
 
   private

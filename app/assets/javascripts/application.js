@@ -14,5 +14,13 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require rails-ujs
+//= reqiure study
+//= require push_notification
 //= require admin_panel
 //= require_tree .
+
+
+
+
+
+

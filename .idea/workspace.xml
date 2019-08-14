@@ -1,19 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/app/views/admin_panel/new_teacher_student.html.erb" line="5" />
-  </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="fdde501e-f3ad-4ce8-ba5f-49bfa5ae2d29" name="Default Changelist" comment="m">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
+=======
+    <list default="true" id="fdde501e-f3ad-4ce8-ba5f-49bfa5ae2d29" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/spec/controllers/posts_controller_spec.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/remote_study_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/remote_study_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/initializers/carrierwave.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/carrierwave.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190112212638_create_pocts.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/development.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/0o/0oh_mac5AREDhc8UcLGygs6XK-j9fJDdCc8r4kY6zEE.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/0o/0oh_mac5AREDhc8UcLGygs6XK-j9fJDdCc8r4kY6zEE.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/61/6143O_PxxJ8KKPGFvHy5vLP015-Z7XvS9-Mb5MyA1a8.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/61/6143O_PxxJ8KKPGFvHy5vLP015-Z7XvS9-Mb5MyA1a8.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/8G/8G4FTffDIMfgpU6KNSuwadrmNvDUcVmTUnPAP8fotXw.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/8G/8G4FTffDIMfgpU6KNSuwadrmNvDUcVmTUnPAP8fotXw.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/9R/9RHJY63yd2UU9As-nDw7iBvYA1q7RCg3K5C3mkxGpw0.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/9R/9RHJY63yd2UU9As-nDw7iBvYA1q7RCg3K5C3mkxGpw0.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Bp/BpNWVnUhVv5R51SlrT9nkup_PR18x71vDUese_5NakQ.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Bp/BpNWVnUhVv5R51SlrT9nkup_PR18x71vDUese_5NakQ.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/HC/HCDOUd7-S45aJ_PjVAC_Vmjyud3i1aQv4cE3t9_Z3Dw.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/HC/HCDOUd7-S45aJ_PjVAC_Vmjyud3i1aQv4cE3t9_Z3Dw.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/L2/L2iPImIL_gKEz9-8z9ZXi_5aElAv2zeweAcAfcTQYMU.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/L2/L2iPImIL_gKEz9-8z9ZXi_5aElAv2zeweAcAfcTQYMU.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/L9/L9zlWns7jxZmMklf0QF4GjjgRUDurtfrFyN1jVBgE1c.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/L9/L9zlWns7jxZmMklf0QF4GjjgRUDurtfrFyN1jVBgE1c.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/MZ/MZcwDENEs93Wd9q7A_7UWdfJrWsBXa0pGp03P9mqG2I.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/MZ/MZcwDENEs93Wd9q7A_7UWdfJrWsBXa0pGp03P9mqG2I.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Q3/Q3u5rH7Ct7K7JH9VCMY8I5ab-BUHoM1_2VfSo5T7N_E.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Q3/Q3u5rH7Ct7K7JH9VCMY8I5ab-BUHoM1_2VfSo5T7N_E.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Qu/QuaFGJEYR1Lnygw8X1AEEp1ZgAeHunbaHIJPS_CQpUo.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Qu/QuaFGJEYR1Lnygw8X1AEEp1ZgAeHunbaHIJPS_CQpUo.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/SR/SRJWFAn9Smxs3cNPqdXEaIm9zfUmxzYmt79V3YQK_6w.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/SR/SRJWFAn9Smxs3cNPqdXEaIm9zfUmxzYmt79V3YQK_6w.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/TL/TLu8Ld0W3JpVny2NfHhCq3Y1Si7tHwlQpLReH4rbw1A.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/TL/TLu8Ld0W3JpVny2NfHhCq3Y1Si7tHwlQpLReH4rbw1A.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/ZT/ZTZEdQpqPU0sQA5-dTYRU__NR4k1eabks6McJvqzhds.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/ZT/ZTZEdQpqPU0sQA5-dTYRU__NR4k1eabks6McJvqzhds.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/aX/aXmo1DxHAFy3PUk9h1OJq3fFfxcn06c5G0WB0PWLdbE.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/aX/aXmo1DxHAFy3PUk9h1OJq3fFfxcn06c5G0WB0PWLdbE.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/ed/edh3bQk44TnQJYXSJA1fVMzfQ16duR_yaVppvznbr6k.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/ed/edh3bQk44TnQJYXSJA1fVMzfQ16duR_yaVppvznbr6k.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/en/en7V_SXXNZgO2kUpR9KRve9DVDWqk83XwVoRV8ZJiCY.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/en/en7V_SXXNZgO2kUpR9KRve9DVDWqk83XwVoRV8ZJiCY.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/ff/ffekSkE_9VjecHyJNXpJ3zw4Asi_p9q7OTQB6pSpkpY.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/ff/ffekSkE_9VjecHyJNXpJ3zw4Asi_p9q7OTQB6pSpkpY.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/j5/j5nCUybf8p28BdecNQNiaqi4o5KN6FzKGaAXV84RhSQ.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/j5/j5nCUybf8p28BdecNQNiaqi4o5KN6FzKGaAXV84RhSQ.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/lh/lh31sMceANqpi8tqGZxIMTJRCiACVlu7VgCpUgU9DxA.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/lh/lh31sMceANqpi8tqGZxIMTJRCiACVlu7VgCpUgU9DxA.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/nZ/nZZo0Y7ODWOtkmrsGveZ2pZ_VpucpBdpIXehQNbfjSI.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/nZ/nZZo0Y7ODWOtkmrsGveZ2pZ_VpucpBdpIXehQNbfjSI.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/oA/oAP9CJd57Q9oaZUzQ3dlMkozB78vt7Wx7OCxHF5ffPM.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/oA/oAP9CJd57Q9oaZUzQ3dlMkozB78vt7Wx7OCxHF5ffPM.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/pt/pt1EICTvknoabhTJb6dj4tA8r7L7SzpwJMMEpcr8JSE.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/pt/pt1EICTvknoabhTJb6dj4tA8r7L7SzpwJMMEpcr8JSE.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/r7/r7KF8_O5BT2XyFBAQRXQrOtI8bob0AlOpC5Ew5zhQ0M.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/r7/r7KF8_O5BT2XyFBAQRXQrOtI8bob0AlOpC5Ew5zhQ0M.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/rj/rjGuat6bVST_QztY5KRxwkIM8EYFem5D-_GF0efh9Oo.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/rj/rjGuat6bVST_QztY5KRxwkIM8EYFem5D-_GF0efh9Oo.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/xR/xRsH-kJkIPC-ps9jT9kvKFJd2BGrE55sWS7eWPSrkBI.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/xR/xRsH-kJkIPC-ps9jT9kvKFJd2BGrE55sWS7eWPSrkBI.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/ya/yaOIhUW507JvkoQF5-fyy1rJyhpuiHT8vDMNKmyZYrk.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/ya/yaOIhUW507JvkoQF5-fyy1rJyhpuiHT8vDMNKmyZYrk.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/cache/dotenv-2.7.4.gem" beforeDir="false" />
+>>>>>>> master
     </list>
-    <ignored path="$PROJECT_DIR$/.bundle/" />
-    <ignored path="$PROJECT_DIR$/components/" />
-    <ignored path="$PROJECT_DIR$/public/system/" />
-    <ignored path="$PROJECT_DIR$/tmp/" />
-    <ignored path="$PROJECT_DIR$/vendor/bundle/" />
-    <ignored path="$PROJECT_DIR$/vendor/cache/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +87,7 @@
   <component name="FavoritesManager">
     <favorites_list name="ruby_school_site" />
   </component>
+<<<<<<< HEAD
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
@@ -138,6 +172,8 @@
       </file>
     </leaf>
   </component>
+=======
+>>>>>>> master
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -159,7 +195,6 @@
       <find>data</find>
       <find>asd</find>
       <find>show</find>
-      <find>bundle</find>
       <find>link</find>
       <find>a {</find>
       <find>btn</find>
@@ -167,6 +202,16 @@
       <find>badge-primary</find>
       <find>.modal</find>
       <find>modal</find>
+      <find>Your account has been updated successfully.</find>
+      <find>flash</find>
+      <find>perform_deliveries</find>
+      <find>delivery_method</find>
+      <find>raise_delivery_errors</find>
+      <find>bundle</find>
+      <find>bun</find>
+      <find>config.assets.compile = true</find>
+      <find>.popover</find>
+      <find>store</find>
     </findStrings>
     <replaceStrings>
       <replace>1</replace>
@@ -180,6 +225,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+<<<<<<< HEAD
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -236,6 +282,17 @@
         <option value="$PROJECT_DIR$/.travis.yml" />
       </list>
     </option>
+=======
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/package.json" />
+>>>>>>> master
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="10" />
@@ -243,7 +300,9 @@
     <option name="width" value="1346" />
     <option name="height" value="688" />
   </component>
+  <component name="ProjectId" id="1P89I8LcZ50ShtjaeD6NUnUkiMY" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+<<<<<<< HEAD
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -293,27 +352,32 @@
       <pane id="RailsProjectView" />
     </panes>
   </component>
+=======
+>>>>>>> master
   <component name="PropertiesComponent">
     <property name="Ruby.ViewRefParam.DefaultExtension" value="html.erb" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../blog" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs.jest.jest_package" value="" />
     <property name="nodejs.mocha.mocha_node_package_dir" value="" />
     <property name="nodejs.protractor.protractor_package" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.ruby.settings.RubyActiveModuleSdkConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/assets/images" />
+      <recent name="$PROJECT_DIR$/app/views/joins" />
       <recent name="H:\Project\ruby_school_site\app\views\layouts" />
       <recent name="H:\Project\ruby_school_site\app\views\student_report" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/views/mailers/alert_home_tasks" />
       <recent name="H:\Project\ruby_school_site\public" />
       <recent name="H:\Project\ruby_school_site\app\assets\images\avatar" />
       <recent name="H:\Project\ruby_school_site\app\assets\images" />
@@ -401,6 +465,7 @@
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_VERBOSE" VALUE="null" />
       <method v="2" />
     </configuration>
     <configuration name="test: Study" type="RakeRunConfigurationType" factoryName="Rake">
@@ -426,6 +491,7 @@
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_VERBOSE" VALUE="null" />
       <method v="2" />
     </configuration>
     <configuration name="Run test 'HomeWorksControllerTest': Study" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest" temporary="true">
@@ -777,6 +843,51 @@
       <workItem from="1555275333618" duration="9442000" />
       <workItem from="1555336602384" duration="8916000" />
       <workItem from="1555361638607" duration="203000" />
+      <workItem from="1558771576643" duration="2168000" />
+      <workItem from="1558793917684" duration="602000" />
+      <workItem from="1558819738968" duration="35000" />
+      <workItem from="1558854294633" duration="13768000" />
+      <workItem from="1558898301323" duration="23092000" />
+      <workItem from="1559022725812" duration="8972000" />
+      <workItem from="1559048800346" duration="22609000" />
+      <workItem from="1559125931924" duration="8736000" />
+      <workItem from="1559139223208" duration="4924000" />
+      <workItem from="1559212574579" duration="3504000" />
+      <workItem from="1559244234843" duration="8561000" />
+      <workItem from="1559387291898" duration="839000" />
+      <workItem from="1559391886563" duration="601000" />
+      <workItem from="1559482123543" duration="6136000" />
+      <workItem from="1559566320131" duration="599000" />
+      <workItem from="1559571434870" duration="3293000" />
+      <workItem from="1559639505423" duration="1622000" />
+      <workItem from="1559648314707" duration="771000" />
+      <workItem from="1559674013497" duration="9238000" />
+      <workItem from="1559742899697" duration="14926000" />
+      <workItem from="1559906284195" duration="862000" />
+      <workItem from="1559943122602" duration="3484000" />
+      <workItem from="1559985686495" duration="1507000" />
+      <workItem from="1560093283194" duration="8972000" />
+      <workItem from="1560174370753" duration="939000" />
+      <workItem from="1560179373764" duration="41515000" />
+      <workItem from="1560343390299" duration="3906000" />
+      <workItem from="1560412790196" duration="2762000" />
+      <workItem from="1560429862998" duration="3786000" />
+      <workItem from="1560546355147" duration="2035000" />
+      <workItem from="1560587254494" duration="1803000" />
+      <workItem from="1560606095312" duration="1580000" />
+      <workItem from="1560632831637" duration="1048000" />
+      <workItem from="1560667494868" duration="1339000" />
+      <workItem from="1560676590609" duration="7543000" />
+      <workItem from="1560692087428" duration="7475000" />
+      <workItem from="1560707671928" duration="3016000" />
+      <workItem from="1560766096139" duration="3672000" />
+      <workItem from="1560795985458" duration="2705000" />
+      <workItem from="1560948869232" duration="1625000" />
+      <workItem from="1560960326635" duration="78000" />
+      <workItem from="1561369176677" duration="7750000" />
+      <workItem from="1562102771492" duration="801000" />
+      <workItem from="1562563668136" duration="54000" />
+      <workItem from="1565244792445" duration="6025000" />
     </task>
     <task id="LOCAL-00001" summary="m">
       <created>1558545704920</created>
@@ -788,9 +899,12 @@
     <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+<<<<<<< HEAD
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="1182583000" />
   </component>
+=======
+>>>>>>> master
   <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
@@ -800,6 +914,7 @@
       <is-autoscroll-to-source value="true" />
     </todo-panel>
   </component>
+<<<<<<< HEAD
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
     <editor active="true" />
@@ -826,6 +941,8 @@
       <window_info anchor="right" id="Database" order="3" weight="0.32980332" />
     </layout>
   </component>
+=======
+>>>>>>> master
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
@@ -835,20 +952,7 @@
         <entry key="MAIN">
           <value>
             <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-              <option name="COLUMN_ORDER">
-                <list>
-                  <option value="0" />
-                  <option value="1" />
-                  <option value="2" />
-                  <option value="3" />
-                </list>
-              </option>
+              <option name="COLUMN_ORDER" />
             </State>
           </value>
         </entry>
@@ -874,8 +978,10 @@
       <path value="https://github.com/Sweex99/ruby_school_site" />
     </ignored-roots>
     <MESSAGE value="m" />
-    <option name="LAST_COMMIT_MESSAGE" value="m" />
+    <MESSAGE value="Travis #4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Travis #4" />
   </component>
+<<<<<<< HEAD
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/public/school.ico">
       <provider selected="true" editor-type-id="images" />
@@ -1149,5 +1255,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/webpacker.yml" />
+=======
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ruby_school_site@Development__Study.rcov" NAME="Development: Study Coverage Results" MODIFIED="1560325412619" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Study" />
+>>>>>>> master
   </component>
 </project>

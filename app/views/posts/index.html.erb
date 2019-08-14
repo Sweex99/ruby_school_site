@@ -1,5 +1,6 @@
+<%#= debug params %>
 <% if user_signed_in? && (current_user.has_role? :admin) %>
-  <%= link_to "Створити Запис", new_post_path, class: "btn btn-success" %>
+  <%= link_to t('post.button_create_post'), new_post_path, class: "btn btn-success" %>
   <br>
 <% end %>
 <br>
@@ -7,7 +8,7 @@
   <div class="card" style="">
     <div class="card-header"><%= link_to show.title, post_path(show.id), class: 'text-center' %>
       <% if user_signed_in? && (current_user.has_role? :admin) %>
-        <%= link_to "delete", destroy_path(show.id), method: :delete, data: {confirm: 'Ви впевнені?'}, class: 'float-right material-icons' %>
+        <%= link_to "delete", post_path(show.id), method: :delete, data: {confirm: 'Ви впевнені?'}, class: 'float-right material-icons' %>
         <%= link_to "edit", edit_post_path(show.id), class: 'float-right material-icons' %>
       <% end %>
     </div>

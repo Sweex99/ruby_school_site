@@ -1,8 +1,10 @@
-class PostsController < ApplicationController
+# frozen_string_literal: true
 
+# good
+class PostsController < ApplicationController
   def create
-    @post = Post.new(post_params)
-    redirect_to @post if @post.save
+    @post = Post.create(post_params)
+    redirect_to posts_path, notice: 'Новина була успішно створена', status: 302 if @post.save
   end
 
   def new
@@ -25,7 +27,7 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
-    redirect_to posts_path
+    redirect_to posts_path, notice: 'Новина була успішно видалена'
   end
 
   def index
@@ -34,6 +36,7 @@ class PostsController < ApplicationController
 
   def show
     @shows = Post.find(params[:id])
+    render :show
   end
 
   private

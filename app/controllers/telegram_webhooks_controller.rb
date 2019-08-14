@@ -1,6 +1,10 @@
+# frozen_string_literal: true
+
+# good
 class TelegramWebhooksController < Telegram::Bot::UpdatesController
   include Telegram::Bot::UpdatesController::MessageContext
-  # or just shortcut:
+  include Telegram::Bot::UpdatesController::Session
+
   use_session!
 
   def start!(*)
@@ -11,12 +15,16 @@ class TelegramWebhooksController < Telegram::Bot::UpdatesController
     respond_with :message, text: '.content'
   end
 
+  def ti!(*)
+    respond_with :message, text: "Вставте це #{chat['id']} на сайті в колонку 'Telegram ID'"
+  end
+
   def memo!(*args)
     if args.any?
       session[:memo] = args.join(' ')
-      respond_with :message, text: t('.notice')
+      respond_with :message, text: '.notice'
     else
-      respond_with :message, text: t('.prompt')
+      respond_with :message, text: '.prompt'
       save_context :memo!
     end
   end
@@ -33,9 +41,8 @@ class TelegramWebhooksController < Telegram::Bot::UpdatesController
     else
       save_context :keyboard!
       respond_with :message, text: t('.prompt'), reply_markup: {
-          keyboard: [t('.buttons')],
-          resize_keyboard: true,
-
+          keyboard: [ t( '.buttons' ) ],
+          resize_keyboard: true
       }
     end
   end
@@ -44,8 +51,8 @@ class TelegramWebhooksController < Telegram::Bot::UpdatesController
     respond_with :message, text: t('.prompt'), reply_markup: {
         inline_keyboard: [
             [
-                {text: t('.alert'), callback_data: 'alert'},
-                {text: t('.no_alert'), callback_data: 'no_alert'},
+                { text: t('.alert'), callback_data: 'alert' },
+                { text: t('.no_alert'), callback_data: 'no_alert' },
             ],
             [{text: t('.repo'), url: 'https://github.com/telegram-bot-rb/telegram-bot'}],
         ],

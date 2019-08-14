@@ -1,0 +1,22 @@
+I"(function() {
+  $(function() {
+    return $('.blk').on('ajax:success', function(e, data, status, xhr) {
+      var URL, idd, url_add_admin, url_delete_admin;
+      URL = ($(e.target)).attr("href");
+      idd = ($(e.target)).attr('id');
+      console.log("Привет");
+      url_delete_admin = "/admin_panels/delete_admin/";
+      url_add_admin = "/admin_panels/add_admin/";
+      if (URL === ("/admin_panels/delete_admin/" + idd)) {
+        $("#" + idd).text("Зробити адміном");
+        $("#" + idd).attr("href", url_add_admin + idd);
+      }
+      if (URL === ("/admin_panels/add_admin/" + idd)) {
+        $("#" + idd).text("Забрати права");
+        return $("#" + idd).attr("href", url_delete_admin + idd);
+      }
+    });
+  });
+
+}).call(this);
+:ET

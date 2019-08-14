@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
+
+  resources :schedules
+  get 'joins/add_student/:id', to: 'joins#add_student', as: 'add_student'
+  resources :joins
+
   get 'show_user/show'
 
   resources :remote_study do
-      get 'show', to: 'remote_study#show', as: 'subject'
+    get 'show', to: 'remote_study#show', as: 'subject'
   end
 
   resources :collective
@@ -39,4 +44,7 @@ Rails.application.routes.draw do
   }
 
   root 'study#index'
+
+  get 'join_to_school/new/', to: 'join_to_school#new'
+
 end

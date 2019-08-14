@@ -1,3 +1,9 @@
 my_first_job:
   cron: "*/1 * * * *" #it will retrieve data every 1 minute
   class: "RemoteTaskWorker"
+my_second_job:
+  cron: "*/1 * * *" #it will retrieve data every 1 minute
+  class: "AlertHomeTask"
+telegram_notification:
+  cron: '*/60 * * * *'
+  class: 'TelegramNotification'
