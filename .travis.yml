@@ -1,17 +1,4 @@
 language: ruby
-branches:
-  only:
-    - travis
-rvm:
-  - 2.3.0
-  - 2.2.4
-script:
-script:
-  - bundle exec rake db:setup
-  - bundle exec rake spec
-cache: bundler
-services:
-  - postgresql
-addons:
-  postgresql: "9.4"
+rvm: 2.2
+script: bundle exec rake spec
 
