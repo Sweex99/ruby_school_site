@@ -1,4 +1,7 @@
 language: ruby
+branches:
+  only:
+    - travis
 rvm: 2.5
 script: bundle
 script: bundle exec rake spec
