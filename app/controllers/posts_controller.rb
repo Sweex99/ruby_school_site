@@ -4,7 +4,7 @@
 class PostsController < ApplicationController
   def create
     @post = Post.create(post_params)
-    redirect_to posts_path, notice: 'Новина була успішно створена' if @post.save
+    redirect_to posts_path, notice: 'Новина була успішно створена', status: 302 if @post.save
   end
 
   def new
@@ -36,6 +36,7 @@ class PostsController < ApplicationController
 
   def show
     @shows = Post.find(params[:id])
+    render :show
   end
 
   private
