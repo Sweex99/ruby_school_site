@@ -49,6 +49,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
+  host: localhost
   database: demo_test_test
   pool: 5
   username: rss
