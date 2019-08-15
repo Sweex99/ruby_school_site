@@ -40,8 +40,8 @@ RSpec.describe PostsController, type: :controller do
   describe 'PUT update' do
     subject { patch :update, params: { id: 1, post: { title: 'asd', body: '123', who: 1 } } }
     it 'check that post updates' do
-      post = create(:post)
-      expect(subject).to redirect_to(post_path(id: 1))
+      put :update, params: { id: 1, post: { title: 'asd', body: '123', who: 1 } }
+      expect(response).to redirect_to(post_path(id: 1))
     end
   end
   # describe 'DELETE destroy' do
