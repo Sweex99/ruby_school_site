@@ -21691,3 +21691,425 @@ Processing by PostsController#update as HTML
 Redirected to http://test.host/posts/1
 Completed 302 Found in 15ms (ActiveRecord: 2.7ms)
   [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+Processing by PostsController#index as HTML
+Creating scope :test. Overwriting existing method Post.test.
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 41ms (Views: 15.1ms | ActiveRecord: 0.0ms)
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "who") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "My Test Title"], ["body", "My test Body"], ["created_at", "2019-08-15 15:40:33.898893"], ["updated_at", "2019-08-15 15:40:33.898893"], ["who", 1]]
+  [1m[35m (0.9ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"198"}
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 198], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 20ms (Views: 5.1ms | ActiveRecord: 1.6ms)
+  [1m[35m (2.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "who") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "My Test Title"], ["body", "My test Body"], ["created_at", "2019-08-15 15:40:33.941546"], ["updated_at", "2019-08-15 15:40:33.941546"], ["who", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"199"}
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 199], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 6ms (Views: 2.5ms | ActiveRecord: 0.9ms)
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"body"=>"123", "title"=>"asd", "who"=>"1"}}
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "who") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "asd"], ["body", "123"], ["created_at", "2019-08-15 15:40:33.984018"], ["updated_at", "2019-08-15 15:40:33.984018"], ["who", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/posts
+Completed 302 Found in 14ms (ActiveRecord: 3.5ms)
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"body"=>"123", "title"=>"asd", "who"=>"1"}}
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "who") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "asd"], ["body", "123"], ["created_at", "2019-08-15 15:40:34.007887"], ["updated_at", "2019-08-15 15:40:34.007887"], ["who", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/posts
+Completed 302 Found in 15ms (ActiveRecord: 2.9ms)
+  [1m[35m (1.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "who") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "My Test Title"], ["body", "My test Body"], ["created_at", "2019-08-15 15:40:34.034552"], ["updated_at", "2019-08-15 15:40:34.034552"], ["who", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+Processing by PostsController#index as HTML
+Creating scope :test. Overwriting existing method Post.test.
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 41ms (Views: 15.2ms | ActiveRecord: 0.0ms)
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "who") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "My Test Title"], ["body", "My test Body"], ["created_at", "2019-08-15 16:09:27.645133"], ["updated_at", "2019-08-15 16:09:27.645133"], ["who", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"203"}
+  [1m[36mPost Load (1.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 203], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 22ms (Views: 5.9ms | ActiveRecord: 1.8ms)
+  [1m[35m (1.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "who") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "My Test Title"], ["body", "My test Body"], ["created_at", "2019-08-15 16:09:27.688973"], ["updated_at", "2019-08-15 16:09:27.688973"], ["who", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"204"}
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 204], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 5ms (Views: 1.8ms | ActiveRecord: 0.9ms)
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"body"=>"123", "title"=>"asd", "who"=>"1"}}
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "who") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "asd"], ["body", "123"], ["created_at", "2019-08-15 16:09:27.735156"], ["updated_at", "2019-08-15 16:09:27.735156"], ["who", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/posts
+Completed 302 Found in 13ms (ActiveRecord: 2.8ms)
+  [1m[35m (4.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"body"=>"123", "title"=>"asd", "who"=>"1"}}
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "who") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "asd"], ["body", "123"], ["created_at", "2019-08-15 16:09:27.764949"], ["updated_at", "2019-08-15 16:09:27.764949"], ["who", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/posts
+Completed 302 Found in 14ms (ActiveRecord: 2.5ms)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "who") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "My Test Title"], ["body", "My test Body"], ["created_at", "2019-08-15 16:09:27.785624"], ["updated_at", "2019-08-15 16:09:27.785624"], ["who", 1]]
+  [1m[35m (8.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+Processing by PostsController#index as HTML
+Creating scope :test. Overwriting existing method Post.test.
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 47ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "who") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "My Test Title"], ["body", "My test Body"], ["created_at", "2019-08-15 16:10:04.763306"], ["updated_at", "2019-08-15 16:10:04.763306"], ["who", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"208"}
+  [1m[36mPost Load (1.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 208], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 21ms (Views: 5.2ms | ActiveRecord: 1.8ms)
+  [1m[35m (0.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.2ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "who") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "My Test Title"], ["body", "My test Body"], ["created_at", "2019-08-15 16:10:04.807135"], ["updated_at", "2019-08-15 16:10:04.807135"], ["who", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"209"}
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 209], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 5ms (Views: 1.9ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"body"=>"123", "title"=>"asd", "who"=>"1"}}
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "who") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "asd"], ["body", "123"], ["created_at", "2019-08-15 16:10:04.855850"], ["updated_at", "2019-08-15 16:10:04.855850"], ["who", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/posts
+Completed 302 Found in 13ms (ActiveRecord: 2.8ms)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"body"=>"123", "title"=>"asd", "who"=>"1"}}
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "who") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "asd"], ["body", "123"], ["created_at", "2019-08-15 16:10:04.875124"], ["updated_at", "2019-08-15 16:10:04.875124"], ["who", 1]]
+  [1m[35m (0.9ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/posts
+Completed 302 Found in 13ms (ActiveRecord: 4.2ms)
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+Processing by PostsController#index as HTML
+Creating scope :test. Overwriting existing method Post.test.
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 49ms (Views: 12.9ms | ActiveRecord: 0.0ms)
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "who") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "My Test Title"], ["body", "My test Body"], ["created_at", "2019-08-15 16:12:52.895203"], ["updated_at", "2019-08-15 16:12:52.895203"], ["who", 1]]
+  [1m[35m (2.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"212"}
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 212], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 20ms (Views: 4.7ms | ActiveRecord: 2.2ms)
+  [1m[35m (1.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "who") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "My Test Title"], ["body", "My test Body"], ["created_at", "2019-08-15 16:12:52.937790"], ["updated_at", "2019-08-15 16:12:52.937790"], ["who", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"213"}
+  [1m[36mPost Load (1.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 213], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 6ms (Views: 2.0ms | ActiveRecord: 1.2ms)
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"body"=>"123", "title"=>"asd", "who"=>"1"}}
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "who") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "asd"], ["body", "123"], ["created_at", "2019-08-15 16:12:52.981355"], ["updated_at", "2019-08-15 16:12:52.981355"], ["who", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/posts
+Completed 302 Found in 15ms (ActiveRecord: 3.3ms)
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"body"=>"123", "title"=>"asd", "who"=>"1"}}
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.9ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "who") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "asd"], ["body", "123"], ["created_at", "2019-08-15 16:12:53.005237"], ["updated_at", "2019-08-15 16:12:53.005237"], ["who", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/posts
+Completed 302 Found in 15ms (ActiveRecord: 4.0ms)
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+Processing by PostsController#update as HTML
+  Parameters: {"post"=>{"body"=>"123", "title"=>"asd", "who"=>"1"}, "id"=>"1"}
+  [1m[36mPost Load (5.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[33mUPDATE "posts" SET "title" = $1, "body" = $2, "updated_at" = $3 WHERE "posts"."id" = $4[0m  [["title", "asd"], ["body", "123"], ["updated_at", "2019-08-15 16:12:53.042281"], ["id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/posts/1
+Completed 302 Found in 20ms (ActiveRecord: 7.5ms)
+  [1m[35m (1.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+Processing by PostsController#index as HTML
+Creating scope :test. Overwriting existing method Post.test.
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 34ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "who") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "My Test Title"], ["body", "My test Body"], ["created_at", "2019-08-15 16:24:11.120903"], ["updated_at", "2019-08-15 16:24:11.120903"], ["who", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"216"}
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 216], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 18ms (Views: 4.4ms | ActiveRecord: 1.4ms)
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "who") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "My Test Title"], ["body", "My test Body"], ["created_at", "2019-08-15 16:24:11.154947"], ["updated_at", "2019-08-15 16:24:11.154947"], ["who", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"217"}
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 217], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"body"=>"123", "title"=>"asd", "who"=>"1"}}
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "who") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "asd"], ["body", "123"], ["created_at", "2019-08-15 16:24:11.190377"], ["updated_at", "2019-08-15 16:24:11.190377"], ["who", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (1.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/posts
+Completed 302 Found in 12ms (ActiveRecord: 3.1ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"body"=>"123", "title"=>"asd", "who"=>"1"}}
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "who") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "asd"], ["body", "123"], ["created_at", "2019-08-15 16:24:11.209161"], ["updated_at", "2019-08-15 16:24:11.209161"], ["who", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/posts
+Completed 302 Found in 10ms (ActiveRecord: 2.1ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "who") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "My Test Title"], ["body", "My test Body"], ["created_at", "2019-08-15 16:24:11.225293"], ["updated_at", "2019-08-15 16:24:11.225293"], ["who", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by PostsController#update as HTML
+  Parameters: {"post"=>{"body"=>"123", "title"=>"asd", "who"=>"1"}, "id"=>"1"}
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "posts" SET "title" = $1, "body" = $2, "updated_at" = $3 WHERE "posts"."id" = $4[0m  [["title", "asd"], ["body", "123"], ["updated_at", "2019-08-15 16:24:11.236366"], ["id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/posts/1
+Completed 302 Found in 12ms (ActiveRecord: 2.5ms)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+Processing by PostsController#index as HTML
+Creating scope :test. Overwriting existing method Post.test.
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 32ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "who") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "My Test Title"], ["body", "My test Body"], ["created_at", "2019-08-15 16:26:21.269236"], ["updated_at", "2019-08-15 16:26:21.269236"], ["who", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"221"}
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 221], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 16ms (Views: 4.4ms | ActiveRecord: 1.2ms)
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "who") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "My Test Title"], ["body", "My test Body"], ["created_at", "2019-08-15 16:26:21.300151"], ["updated_at", "2019-08-15 16:26:21.300151"], ["who", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"222"}
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 222], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 5ms (Views: 1.7ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"body"=>"123", "title"=>"asd", "who"=>"1"}}
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "who") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "asd"], ["body", "123"], ["created_at", "2019-08-15 16:26:21.341221"], ["updated_at", "2019-08-15 16:26:21.341221"], ["who", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/posts
+Completed 302 Found in 12ms (ActiveRecord: 2.3ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"body"=>"123", "title"=>"asd", "who"=>"1"}}
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "who") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "asd"], ["body", "123"], ["created_at", "2019-08-15 16:26:21.359527"], ["updated_at", "2019-08-15 16:26:21.359527"], ["who", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/posts
+Completed 302 Found in 11ms (ActiveRecord: 2.3ms)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "who") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "My Test Title"], ["body", "My test Body"], ["created_at", "2019-08-15 16:26:21.379445"], ["updated_at", "2019-08-15 16:26:21.379445"], ["who", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by PostsController#update as HTML
+  Parameters: {"post"=>{"body"=>"123", "title"=>"asd", "who"=>"1"}, "id"=>"1"}
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "posts" SET "title" = $1, "body" = $2, "updated_at" = $3 WHERE "posts"."id" = $4[0m  [["title", "asd"], ["body", "123"], ["updated_at", "2019-08-15 16:26:21.393718"], ["id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/posts/1
+Completed 302 Found in 14ms (ActiveRecord: 2.9ms)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m

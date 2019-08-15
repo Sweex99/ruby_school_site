@@ -14,9 +14,9 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
     if @post.update_attributes(post_params)
-      redirect_to @post
+      redirect_to @post, status: 302
     else
-      render :edit
+      render :edit, status: 302
     end
   end
 
