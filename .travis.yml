@@ -3,6 +3,11 @@ branches:
   only:
     - travis
 rvm: 2.5
+env:
+  - DB=pgsql
+services:
+  - postgresql
 script: bundle
-script: bundle exec rake spec
+script: bundle exec rake db:migrate
+script: RAILS_ENV=test bundle exec rake spec
 
