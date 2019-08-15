@@ -9,7 +9,7 @@ services:
   - postgresql
 before_script:
   - psql -c "CREATE USER rss WITH PASSWORD '1234';" -U postgres
-  - psql -c "GRANT ALL PRIVILEGES ON  DATABASE demo_test_test to rss;"
+  - psql -c "ALTER USER rss CREATEDB;"
   - RAILS_ENV=test bundle exec rake db:setup
 script: bundle
 script: bundle exec rake db:migrate
