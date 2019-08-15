@@ -37,12 +37,12 @@ RSpec.describe PostsController, type: :controller do
       expect(subject).to redirect_to(posts_path)
     end
   end
-  # describe 'PUT update' do
-  #   subject { put :update, params: { id: 1, post: { title: 'asd', body: '123', who: 1 } } }
-  #   it 'check that post updates' do
-  #     expect(subject).to redirect_to(post_path(id: 1))
-  #   end
-  # end
+  describe 'PUT update' do
+    subject { patch :update, params: { id: 1, post: { title: 'asd', body: '123', who: 1 } } }
+    it 'check that post updates' do
+      expect(subject).to redirect_to(post_path(id: 1))
+    end
+  end
   # describe 'DELETE destroy' do
   #   # subject { put :update, params: { id: post.id } }
   #   it 'should destroy post' do
