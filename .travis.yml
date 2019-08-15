@@ -9,8 +9,8 @@ services:
   - postgresql
 before_script:
   - psql -c "CREATE USER rss WITH PASSWORD '1234';" -U postgres
+  - RAILS_ENV=text bundle exec rake db:setup
 script: bundle
-script: RAILS_ENV=text bundle exec rake db:setup
 script: bundle exec rake db:migrate
 script: RAILS_ENV=test bundle exec rake spec
 
