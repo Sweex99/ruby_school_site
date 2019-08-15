@@ -27,7 +27,7 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
-    redirect_to posts_path, notice: 'Новина була успішно видалена'
+    redirect_to posts_path, notice: 'Новина була успішно видалена', status: 302
   end
 
   def index

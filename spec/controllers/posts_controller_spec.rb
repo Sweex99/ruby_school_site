@@ -23,10 +23,6 @@ RSpec.describe PostsController, type: :controller do
       get :show, params: { id: post.id }
       expect(response).to render_template(:show)
     end
-    # it 'should return 404 status code if record not found' do
-    #   get :show, params: { id: 0 }
-    #   response.status.should == 404
-    # end
   end
   describe 'POST create' do
     subject { post :create, params: { post: { title: 'asd', body: '123', who: 1 } } }
@@ -38,17 +34,18 @@ RSpec.describe PostsController, type: :controller do
     end
   end
   describe 'PUT update' do
-    subject { patch :update, params: { id: 1, post: { title: 'asd', body: '123', who: 1 } } }
     it 'check that post updates' do
       put :update, params: { id: 1, post: { title: 'asd', body: '123', who: 1 } }
       expect(response).to redirect_to(post_path(id: 1))
     end
   end
-  # describe 'DELETE destroy' do
-  #   # subject { put :update, params: { id: post.id } }
-  #   it 'should destroy post' do
-  #     post = create(:post)
-  #     expect { delete post_path(id: post.id) }.should_not change(Post, :count)
-  #   end
-  # end
+  describe 'DELETE destroy' do
+    subject { delete :destroy, params: { id: 1 } }
+    it 'should destroy post' do
+      expect(subject.status).to eq(302)
+    end
+    it 'should after delete record redirect to :index action' do
+      expect(subject).to redirect_to(posts_path)
+    end
+  end
 end
