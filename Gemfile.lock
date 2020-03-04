@@ -189,7 +189,7 @@ GEM
     psych (3.1.0)
     psych (3.1.0-x86-mingw32)
     public_suffix (3.1.1)
-    puma (3.12.1)
+    puma (3.12.4)
     raabro (1.1.6)
     rack (2.0.8)
     rack-protection (2.0.5)
@@ -358,7 +358,7 @@ DEPENDENCIES
   letter_opener
   mini_magick
   pg
-  puma (~> 3.7)
+  puma (~> 3.12)
   rails (~> 5.1.6)
   redis
   rolify
